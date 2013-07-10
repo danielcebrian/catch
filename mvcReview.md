@@ -11,6 +11,8 @@ The original Javascript MVC framework
 
 ## [Angular](https://github.com/angular/angular.js)
 
+Strong contender for new Javascript MVC library of choice for most projects, produced by folks at Google
+
 - easier to get started than Ember
 - comes from Google, so it may be a safe bet in terms of future-proofing the ecosystem
 - declarative style makes for readable markup and fewer lines of code
@@ -19,6 +21,9 @@ The original Javascript MVC framework
 
 ## [Ember](https://github.com/emberjs/ember.js/)
 
+Other lead contender for new MVC library of choice, designed for large-scale, complex apps
+
 - designed for complex applications
 - difficult learning curve
 - powerful support for lots of features that may be needed
+- strong model layer
