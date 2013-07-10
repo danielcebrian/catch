@@ -25,6 +25,8 @@ A simple but powerful library for building data applications in pure Javascript 
 Quite simply, SlickGrid is a JavaScript grid/spreadsheet component.
 It is an advanced component and is going to be a bit more difficult to learn and configure, but once you realize its full potential, it will blow your mind!
 
+Here's a [very nice demo](http://mleibman.github.io/SlickGrid/examples/example-grouping)
+
 - seems to have nice decoupling of data and presentation
 - has the largest community
 - appears to have been adopted by JQuery UI
