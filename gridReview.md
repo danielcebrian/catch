@@ -46,3 +46,7 @@ Amazing JS data visualization library
 ## [Ember-Table](https://github.com/addepar/ember-table)
 
 - depends on Ember.js and JQuery UI
+
+## [ng-grid](http://angular-ui.github.io/ng-grid/)
+
+- a grid plug-in for Angular

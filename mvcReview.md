@@ -23,6 +23,8 @@ Strong contender for new Javascript MVC library of choice for most projects, pro
 
 Other lead contender for new MVC library of choice, designed for large-scale, complex apps
 
+- [this thread](http://eviltrout.com/2013/06/15/ember-vs-angular.html) discusses grid controls, performance, etc. related ot ember vs angular
+
 - designed for complex applications
 - difficult learning curve
 - powerful support for lots of features that may be needed
