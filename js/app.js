@@ -23,9 +23,12 @@
   //
 
   App.render = function() {
-    App.dom.content = $("#main");
-    var mainHtml = App.templates.annotation(App.data.annotations[0]);
-    App.dom.content.html(mainHtml);
+    App.dom.mainList = $("#main-list");
+    var mainHtml = "";
+    App.data.annotations.forEach(function(item) {
+      mainHtml = mainHtml + App.templates.annotation(item);
+    });
+    App.dom.mainList.html(mainHtml);
   };
 
   //

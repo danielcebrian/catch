@@ -14,15 +14,25 @@
 
 <script type="text/x-handlebars" id="annotation-template">
   <div class="annotation">
-    <div class="annotation-id">
-      {{ id }}
+
+    <div class="property id">
+      <div class="label">
+        id
+      </div>
+      <div class="value">
+        {{ id }}
+      </div>
     </div>
-    <div class="annotation-type">
-      {{ type }}
+
+    <div class="property body">
+      <div class="label">
+        body text
+      </div>
+      <div class="value">
+        {{ body.chars }}
+      </div>
     </div>
-    <div class="annotation-body">
-      {{ body.chars }}
-    </div>
+
   </div>
 </script>
 
@@ -32,6 +42,10 @@
   </header>
 
   <section id="main">
+
+    <div id="main-list" class="annotation-list">
+
+    </div>
 
   </section>
 

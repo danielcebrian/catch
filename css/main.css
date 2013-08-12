@@ -8,3 +8,25 @@ body, div, p, canvas, h1, h2 {
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
+
+.annotation-list .annotation {
+  border: 2px solid green;
+  width: 600px;
+  margin: 100px auto;
+  clear: both;
+}
+
+.annotation-list .property {
+  clear: both;
+  border: 2px solid red;
+}
+
+.annotation-list .label {
+  width: 100px;
+  float: left;
+}
+
+.annotation-list .value {
+  width: 450px;
+  float: right;
+}
