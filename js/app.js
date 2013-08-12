@@ -45,7 +45,7 @@
   });
 
   App.Models.Target = App.Models.Resource.extend({
-    "selector": DS.attr(array, "App.Models.Selector")
+    "selector": DS.attr("array", "App.Models.Selector")
   });
 
   App.Models.Body = App.Models.Resource.extend({
@@ -85,4 +85,17 @@
   });
 
 
+  //
+  // FIXTURES
+  //
+
+  $(function() {
+    var anno_json = $("#annotationsFixture").text();
+    App.Fixtures = App.Fixtures || {};
+    App.Fixtures.Annotations = JSON.parse(anno_json);
+  });
+
+
 }).call(this);
+
+
