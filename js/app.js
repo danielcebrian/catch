@@ -29,7 +29,6 @@
   App.Models = App.Models || {};
 
   App.Models.Resource = DS.Model.extend({
-    "id": DS.attr('string', {key: "@id"}),
     "@type": DS.attr('string')
   });
 
@@ -81,7 +80,7 @@
 
   App.Store = DS.Store.extend({
     revision: 1,
-    adapter: 'DS.FixtureAdapter'
+    adapter: DS.FixtureAdapter.create()
   });
 
 
@@ -91,8 +90,11 @@
 
   $(function() {
     var anno_json = $("#annotationsFixture").text();
-    var anno_obj = JSON.parse(anno_json)['items'];
-    App.Models.Annotation.FIXTURES = anno_obj;
+    var anno_items = JSON.parse(anno_json)['items'];
+    anno_items.forEach(function(item) {
+      item.id = item['@id'];
+    });
+    App.Models.Annotation.FIXTURES = anno_items;
   });
 
 
