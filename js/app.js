@@ -3,99 +3,53 @@
 
 (function() {
 
-  window.App = Ember.Application.create();
+  window.App = window.App || {};
+  App.data = App.data || {};
+  App.dom = App.dom || {};
+  App.templates = App.templates || {};
 
   //
-  // ROUTER
+  // TEMPLATES
   //
 
-  /*
-  App.Router.map(function() {
-    // put your routes here
-    this.resource('index', { path: '/' });
-  });
+  var compileTemplates = function() {
+    App.templates.annotation = Handlebars.compile($("#annotation-template").text());
+  };
 
-  App.IndexRoute = Ember.Route.extend({
-    model: function() {
-      return ['red', 'yellow', 'blue'];
-    }
-  });
-  */
-
-  //
-  // MODELS
-  //
-
-  App.Models = App.Models || {};
-
-  App.Models.Resource = DS.Model.extend({
-    "@type": DS.attr('string')
-  });
-
-  App.Models.Person = App.Models.Resource.extend({
-    "name": DS.attr('string'),
-    "foaf": DS.attr('string')  // ?? may not be needed - value may always be "Person"
-  });
-
-  App.Models.Selector = App.Models.Resource.extend({
-    "@type": DS.attr("string"),
-    "item": DS.attr("string"),  // serialized object
-    "0": DS.attr("string")  // serialized object
-  });
-
-  App.Models.Target = App.Models.Resource.extend({
-    "selector": DS.attr("array", "App.Models.Selector")
-  });
-
-  App.Models.Body = App.Models.Resource.extend({
-    "chars": DS.attr('string')
-  });
-
-  App.Models.Annotation = App.Models.Resource.extend({
-    "annotatedBy": DS.belongsTo("App.Person"),
-    "annotatedAt": DS.attr('date'),
-    "body": DS.belongsTo("App.Body"),
-    "target": DS.belongsTo("App.Target")
-  });
-
-  /*  TBD
-
-  App.MediaObject = App.Resource.extend({
-    "id": DS.attr('string'),
-    "title": DS.attr('string'),
-    "mediaType": DS.attr('string'),
-    "owner": DS.attr('string'),  // maybe App.Person ?
-    "client": DS.attr('string'),
-    "lastAnnotated": DS.attr('date'),  //
-    "annotationCount": DS.attr('integer'),
-    "numberOfTags": DS.attr('integer')
-  });
-
-  */
 
 
   //
-  // DATA STORE
+  // START APP
   //
 
-  App.Store = DS.Store.extend({
-    revision: 1,
-    adapter: DS.FixtureAdapter.create()
-  });
-
+  App.render = function() {
+    App.dom.content = $("#main");
+    var mainHtml = App.templates.annotation(App.data.annotations[0]);
+    App.dom.content.html(mainHtml);
+  };
 
   //
   // FIXTURES
   //
 
-  $(function() {
+  var loadFixtures = function() {
     var anno_json = $("#annotationsFixture").text();
     var anno_items = JSON.parse(anno_json)['items'];
     anno_items.forEach(function(item) {
       item.id = item['@id'];
+      item.type = item['@type'];
     });
-    App.Models.Annotation.FIXTURES = anno_items;
+    App.data.annotations = anno_items;
+  };
+
+
+  $(function() {
+    compileTemplates();
+    loadFixtures();
+    App.render();
   });
+
+
 
 
 }).call(this);
