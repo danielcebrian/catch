@@ -29,7 +29,7 @@
   App.Models = App.Models || {};
 
   App.Models.Resource = DS.Model.extend({
-    "@id": DS.attr('string'),
+    "id": DS.attr('string', {key: "@id"}),
     "@type": DS.attr('string')
   });
 
@@ -91,8 +91,8 @@
 
   $(function() {
     var anno_json = $("#annotationsFixture").text();
-    App.Fixtures = App.Fixtures || {};
-    App.Fixtures.Annotations = JSON.parse(anno_json);
+    var anno_obj = JSON.parse(anno_json)['items'];
+    App.Models.Annotation.FIXTURES = anno_obj;
   });
 
 
