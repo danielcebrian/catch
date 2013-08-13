@@ -13,27 +13,30 @@
 
 
 <script type="text/x-handlebars" id="annotation-template">
-  <div class="annotation">
 
-    <div class="property id">
-      <div class="label">
-        id
-      </div>
-      <div class="value">
-        {{ id }}
-      </div>
+  <div class="annotation" id="{{ id }}">
+
+    {{{ content }}}
+
+  </div>
+
+</script>
+
+
+<script type="text/x-handlebars" id="annotation-property-template">
+
+  <div class="annotation-property {{ property }} level{{ level }}">
+
+    <div class="label">
+      {{ property }}
     </div>
 
-    <div class="property body">
-      <div class="label">
-        body text
-      </div>
-      <div class="value">
-        {{ body.chars }}
-      </div>
+    <div class="value">
+      {{{ value }}}
     </div>
 
   </div>
+
 </script>
 
 
@@ -50,7 +53,7 @@
   </section>
 
   <footer>
-    footer goes here
+    <!--    footer goes here      -->
   </footer>
 
 
