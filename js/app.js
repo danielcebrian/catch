@@ -15,11 +15,13 @@
   var compileTemplates = function() {
     App.templates.annotationProperty = Handlebars.compile($("#annotation-property-template").text());
     App.templates.annotation = Handlebars.compile($("#annotation-template").text());
+    App.templates.annotationTable = Handlebars.compile($("#annotation-table-template").text());
+    App.templates.annotationTableRow = Handlebars.compile($("#annotation-table-row-template").text());
   };
 
 
   //
-  // ANNOTATION RENDERING
+  // BASIC ANNOTATION RENDERING
   //
 
   var renderObject = function(obj, level) {
@@ -32,7 +34,7 @@
           level: level,
           property: prop,
           value: renderObject(val, level + 1)
-        })
+        });
       } else {
         console.log("property: " + prop);
         html = html + App.templates.annotationProperty({
@@ -45,11 +47,7 @@
     return html;
   };
 
-  //
-  // START APP
-  //
-
-  App.render = function() {
+  var renderBasicAnnotations = function() {
     App.dom.mainList = $("#main-list");
     App.data.annotations.slice(0,10).forEach(function(item) {
       var content = renderObject(item);
@@ -60,6 +58,24 @@
       App.dom.mainList.append(annotationHtml);
     });
   };
+
+
+  //
+  // TABULAR ANNOTATION RENDERING
+  //
+
+  var renderTabularAnnotations = function() {
+    App.dom.mainList = $("#main-list");
+    var tableHtml = App.templates.table({});
+    App.dom.mainList.html(tableHtml);
+  };
+
+
+  //
+  // START APP
+  //
+
+  App.render = renderTabularAnnotations;
 
   //
   // FIXTURES
