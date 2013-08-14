@@ -47,15 +47,15 @@
     return html;
   };
 
-  var renderBasicAnnotations = function() {
-    App.dom.mainList = $("#main-list");
+  var renderBasicAnnotations = function(el) {
+    el = el || $("#main-list");
     App.data.annotations.slice(0,10).forEach(function(item) {
       var content = renderObject(item);
       var annotationHtml = App.templates.annotation({
         id: item["@id"],
         content: content
       });
-      App.dom.mainList.append(annotationHtml);
+      el.append(annotationHtml);
     });
   };
 
@@ -64,10 +64,50 @@
   // TABULAR ANNOTATION RENDERING
   //
 
-  var renderTabularAnnotations = function() {
-    App.dom.mainList = $("#main-list");
-    var tableHtml = App.templates.table({});
-    App.dom.mainList.html(tableHtml);
+  App.tables = App.tables || {};
+  App.tables.basic = {
+    columns: [
+      { id: "annotatedAt", name: "Date" },
+      { id: "annotatedBy", name: "Annotated By" },
+      { id: "body", name: "Body" }
+    ]
+  };
+
+  var createHeader = function(columns) {
+    var headerHtml = "<thead><tr>";
+    columns.forEach(function(column) {
+      headerHtml = headerHtml + '<th id="header-' + column.id + '">' + column.name + '</th>';
+    });
+    headerHtml = headerHtml + "</tr></thead>";
+    return headerHtml;
+  };
+
+  var createRow = function(columns, data) {
+    var rowHtml = "<tr>";
+    columns.forEach(function(column) {
+      rowHtml = rowHtml + '<td class="column-' + column.id + '">' + data[column.id] + '</td>';
+    });
+    rowHtml = rowHtml + "</tr>";
+    return rowHtml;
+  };
+
+
+  var renderTabularAnnotations = function(el) {
+    el = el || $("#main-list");
+    var tableType = App.tables.basic;
+    var tableHtml = App.templates.annotationTable();
+    el.html(tableHtml);
+    el.append(createHeader(tableType.columns));
+    el.append("<tbody>");
+    App.data.annotations.slice(0,10).forEach(function(item) {
+      var rowHtml = createRow(tableType.columns, {
+        annotatedAt: item.annotatedAt,
+        annotatedBy: item.annotatedBy.name,
+        body: item.body.chars
+      });
+      el.append(rowHtml);
+    });
+    el.append("</tbody");
   };
 
 

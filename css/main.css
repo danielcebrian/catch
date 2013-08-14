@@ -19,6 +19,18 @@ header {
   width: 100%;
 }
 
+
+table.annotations .column-annotatedAt {
+  width: 180px;
+}
+
+table.annotations .column-annotatedBy {
+  width: 250px;
+}
+
+
+
+
 .annotation-list .annotation {
   width: 80%;
   min-width: 600px;
@@ -27,13 +39,10 @@ header {
   clear: both;
   padding: 20px;
   border-radius: 6px;
--moz-border-radius: 6px; 
--webkit-border-radius: 6px; 
-border: 2px outset #9BB0CC;
-
-background-color: #ffffff;
-
-
+  -moz-border-radius: 6px; 
+  -webkit-border-radius: 6px; 
+  border: 2px outset #9BB0CC;
+  background-color: #ffffff;
 }
 
 .annotation-list .annotation-property.level0 {
