@@ -9,15 +9,16 @@
   App.templates = App.templates || {};
   App.controllers = App.controllers || {};
 
-  App.app = angular.module('app', ['ngGrid']);
+  App.app = angular.module('app', ['ngGrid', ngGridFlexibleHeightPlugin]);
 
   App.app.controller('BasicGrid', function($scope) {
     $scope.myData = App.data.annotations;
     $scope.gridOptions = {
       data: 'myData',
       columnDefs: [
-        { field: "annotatedBy", displayName: "Annotated By"},
-        { field: "annotatedAt", displayName: "Annotated At"}
+        { width: "20%", field: "annotatedBy", displayName: "Annotated By", cellTemplate: '<div class="ngCellText">{{row.getProperty(col.field).name}}</div>' },
+        { width: "20%", field: "annotatedAt", displayName: "Annotated At"},
+        { width: "60%", field: "body", displayName: "Body", cellTemplate: '<div class="ngCellText" ng-bind-html-unsafe="row.getProperty(col.field).chars"></div>' }
       ]
     };
   });
