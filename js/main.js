@@ -9,7 +9,8 @@
   App.templates = App.templates || {};
   App.controllers = App.controllers || {};
 
-  App.app = angular.module('app', ['ngGrid', ngGridFlexibleHeightPlugin]);
+  //App.app = angular.module('app', ['ngGrid', ngGridFlexibleHeightPlugin]);
+  App.app = angular.module('app', ['ngGrid']);
 
   App.app.controller('BasicGrid', function($scope) {
     $scope.myData = App.data.annotations;
