@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>CATCH v0.2</title>
+    <title>CATCH Annotation Explorer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -16,9 +16,9 @@
 
   <div class="mediaList">
 
-    {{ #each mediaItems }}
+    {{#each mediaItems}}
       {{{ this }}}
-    {{ /each }}
+    {{/each }}
 
   </div>
 
@@ -27,7 +27,7 @@
 
 <script type="text/x-handlebars" id="mediaItem_Template">
 
-  <div class="mediaItem" id="mediaItem_{{ id }}">
+  <div class="mediaItem" id="mediaItem_{{ item.id }}">
 
     {{{ mediaRow }}}
 
@@ -42,23 +42,23 @@
 
   <div class="mediaRow">
 
-    <div class="title">
+    <div class="title field">
       {{ title }}
     </div>
 
-    <div class="author">
+    <div class="author field">
       {{ author }}
     </div>
 
-    <div class="pubDate">
+    <div class="pubDate field">
       {{ pubDate }}
     </div>
 
-    <div class="annotationsCount">
+    <div class="annotationsCount field">
       {{ annotationsCount }}
     </div>
 
-    <div class="latestAnnotationDate">
+    <div class="latestAnnotationDate field">
       {{ latestAnnotationDate }}
     </div>
 
@@ -151,12 +151,12 @@
 
 
   <header>
-    <h1>CATCH v0.2</h1>
+    <h1>CATCH Annotation Explorer</h1>
   </header>
 
   <section id="main">
 
-    <div id="main-list" class="annotation-list">
+    <div class="mediaListContainer">
 
     </div>
 
@@ -185,27 +185,27 @@ window.App.data.media = [
     "id": "123",
     "title": "Adventures of Tom Sawyer",
     "author": "Mark Twain",
-    "pubDate": "1876-07-15 00:00:00",
+    "pubDate": "July, 1876",
     "annotationsCount": 4393,
-    "latestAnnotationDate": "2013-03-19 00:32:48"
+    "latestAnnotationDate": "yesterday"
   },
 
   {
     "id": "234",
     "title": "Leaves of Grass",
     "author": "Walt Whitman",
-    "pubDate": "1855-07-15 00:00:00",
+    "pubDate": "September, 1855",
     "annotationsCount": 6756,
-    "latestAnnotationDate": "2013-05-21 00:14:42"
+    "latestAnnotationDate": "9:15 AM"
   },
 
-  {
+    {
     "id": "345",
     "title": "Moby Dick",
     "author": "Hermann Melville",
-    "pubDate": "1851-03-15 00:00:00",
+    "pubDate": "March, 1851",
     "annotationsCount": 3756,
-    "latestAnnotationDate": "2013-03-21 00:32:48"
+    "latestAnnotationDate": "Aug 14"
   }
 
 ];
