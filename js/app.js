@@ -29,6 +29,11 @@
     });
   };
 
+  Handlebars.registerHelper('deparagraph', function(txt) {
+    return txt.replace("<p>", "").replace("</p>", "");
+  });
+
+
   //
   // RENDER MEDIA
   //
@@ -50,7 +55,7 @@
   };
 
   var expandMediaItem = function(mediaId) {
-    var el = $("#mediaItem_" + mediaId + " .mediaDetail");
+    var el = $("#mediaItem_" + mediaId + " .mediaDetail .annotationListContainer");
     var annotationItems = [];
     var index = 0;
     App.data.annotations.forEach(function(item) {

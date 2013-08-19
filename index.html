@@ -71,7 +71,9 @@
 
     <div class="mediaDetail">
 
-      {{{ annotationList }}}
+      <div class="annotationListContainer">
+        {{{ annotationList }}}
+      </div>
 
     </div>
 
@@ -106,15 +108,15 @@
 
   <div class="annotationRow">
 
-    <div class="annotatedBy">
+    <div class="annotatedBy field">
       {{ annotatedBy.name }}
     </div>
 
-    <div class="body">
-      {{{ body.chars }}}
+    <div class="body field">
+      {{deparagraph body.chars}}
     </div>
 
-    <div class="annotatedAt">
+    <div class="annotatedAt field">
       {{ annotatedAt }}
     </div>
 
