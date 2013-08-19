@@ -38,6 +38,8 @@ header {
 .mediaListContainer {
   width: 90%;
   margin: 0 auto;
+  border-top:1px solid #cccccc;
+  border-right:1px solid #cccccc;
 }
 
 .mediaList {
@@ -52,6 +54,7 @@ header {
   padding-top:20px;
   height: 40px;
   border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
 }
 
 .mediaItem.odd .mediaRow {
@@ -82,14 +85,18 @@ header {
   width: 8%;
 }
 
+.mediaDetail {
+}
+
 
 /* ANNOTATION LIST */
 
 
 .annotationListContainer {
-  width: 95%;
+  width: 96%;
   margin: 0 auto;
   float: right;
+  border-left: 2px solid #dddddd;
 }
 
 .annotationList {
