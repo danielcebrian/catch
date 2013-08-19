@@ -9,22 +9,124 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-header.page {
+div {
+  overflow: hidden;
+}
+
+header {
   margin: 30px auto;
   text-align: center;
   width: 100%;
 }
 
-#main-list {
+
+/* GRID FORMATTING */
+
+.field {
+  padding: 0 10px;
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mediaRow, .annotationRow {
+  width: 100%;
+}
+
+/* MEDIA LIST */
+
+.mediaListContainer {
+  width: 90%;
   margin: 0 auto;
 }
 
-.ngViewport {
-  overflow: hidden;
+.mediaList {
+  width: 100%;
 }
 
-.gridStyle {
-    border: 1px solid rgb(212,212,212);
-    width: 90%;
-    height: 600px;
+
+/* MEDIA ROW */
+
+
+.mediaRow {
+  padding-top:20px;
+  height: 40px;
+  border-bottom: 1px solid #cccccc;
 }
+
+.mediaItem.odd .mediaRow {
+  background-color: #eaeaff;
+}
+
+.mediaItem.even .mediaRow {
+  background-color: #f4f4ff;
+}
+
+.mediaRow .title {
+  width: 26%;
+}
+
+.mediaRow .author {
+  width: 18%;
+}
+
+.mediaRow .pubDate {
+  width: 18%;
+}
+
+.mediaRow .latestAnnotationDate {
+  width: 18%;
+}
+
+.mediaRow .annotationsCount {
+  width: 8%;
+}
+
+
+/* ANNOTATION LIST */
+
+
+.annotationListContainer {
+  width: 95%;
+  margin: 0 auto;
+  float: right;
+}
+
+.annotationList {
+  width: 100%;
+}
+
+
+/* ANNOTATION ROW */
+
+
+.annotationRow {
+  padding-top:10px;
+  height: 40px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.annotationItem.odd .annotationRow {
+  background-color: #eaffea;
+}
+
+.annotationItem.even .annotationRow {
+  background-color: #f4fff4;
+}
+
+.annotationRow .annotatedBy {
+  width: 19%;
+}
+
+.annotationRow .body {
+  width: 60%;
+}
+
+.annotationRow .annotatedAt {
+  width: 14%
+}
+
+.annotationList .field {
+  padding: 5px;
+}
+
