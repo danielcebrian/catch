@@ -39,6 +39,10 @@ header {
   border-bottom: 1px solid #cccccc;
 }
 
+.mediaItem.odd .mediaRow {
+  background-color: #f7f7f7;
+}
+
 .mediaRow .field {
   float: left;
 }

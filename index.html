@@ -27,7 +27,7 @@
 
 <script type="text/x-handlebars" id="mediaItem_Template">
 
-  <div class="mediaItem" id="mediaItem_{{ item.id }}">
+  <div class="mediaItem {{ evenOrOdd }}" id="mediaItem_{{ item.id }}">
 
     {{{ mediaRow }}}
 
@@ -69,15 +69,11 @@
 
 <script type="text/x-handlebars" id="mediaDetail_Template">
 
-  <div>
-
     <div class="mediaDetail">
 
       {{{ annotationList }}}
 
     </div>
-
-  </div>
 
 </script>
 
@@ -86,9 +82,9 @@
 
   <div class="annotationList">
 
-    {{ #each annotationItems }}
+    {{#each annotationItems}}
       {{{ this }}}
-    {{ /each }}
+    {{/each}}
 
   </div>
 
@@ -96,7 +92,7 @@
 
 <script type="text/x-handlebars" id="annotationItem_Template">
 
-  <div class="annotationItem">
+  <div class="annotationItem {{ evenOrOdd }}" id="annotationItem_{{ id }}">
 
     {{{ annotationRow }}}
 
@@ -111,11 +107,11 @@
   <div class="annotationRow">
 
     <div class="annotatedBy">
-      {{ annotatedBy }}
+      {{ annotatedBy.name }}
     </div>
 
     <div class="body">
-      {{ body }}
+      {{{ body.chars }}}
     </div>
 
     <div class="annotatedAt">

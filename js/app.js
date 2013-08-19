@@ -35,15 +35,36 @@
 
   var renderMedia = function() {
     var mediaItems = [];
+    var index = 0;
     App.data.media.forEach(function (item) {
       var html = App.templates.mediaItem({
         item: item,
+        evenOrOdd: index % 2 ? "odd" : "even",
         mediaRow: App.templates.mediaRow(item),
-        mediaDetail: ""
+        mediaDetail: App.templates.mediaDetail({ annotationList: ""})
       });
+      index++;
       mediaItems.push(html);
     });
     $(".mediaListContainer").html(App.templates.mediaList({ mediaItems: mediaItems }));
+  };
+
+  var expandMediaItem = function(mediaId) {
+    var el = $("#mediaItem_" + mediaId + " .mediaDetail");
+    var annotationItems = [];
+    var index = 0;
+    App.data.annotations.forEach(function(item) {
+      var html = App.templates.annotationItem({
+        item: item,
+        evenOrOdd: index % 2 ? "odd" : "even",
+        annotationRow: App.templates.annotationRow(item),
+        //annotationDetail: App.templates.annotationDetail(item)
+        annotationDetail: ""
+      });
+      index++;
+      annotationItems.push(html);
+    });
+    el.html(App.templates.annotationList({ annotationItems: annotationItems }));
   };
 
 
@@ -53,7 +74,10 @@
   // START APP
   //
 
-  App.refresh = renderMedia;
+  App.refresh = function() {
+    renderMedia();
+    expandMediaItem("345");
+  };
 
   //
   // FIXTURES
