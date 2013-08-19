@@ -2,7 +2,8 @@
 
 var fs = require('fs');
 
-var filename = "ae.json";
+//var filename = "ae.json";
+var filename = "media.json";
 var fdata = fs.readFileSync(filename);
 
 var data = JSON.parse(fdata);
