@@ -149,9 +149,9 @@
   <div class="videoAnnotationDetail">
 
     <div class="target">
-
-      <video src="http://video-js.zencoder.com/oceans-clip.mp4"></video>
-
+      <div class="videoContainer">
+        <video poster="http://video-js.zencoder.com/oceans-clip.png" src="http://video-js.zencoder.com/oceans-clip.mp4" controls></video>
+      </div>
     </div>
 
     <div class="body">
@@ -252,7 +252,45 @@ window.App.data.videoAnnotations = [
     "name": "Daniel Cebrian"
   },
   "body": {
-    "chars": "o sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum"
+    "chars": "My feeling about this video is: o sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum"
+  },
+  "target": {
+    "container":"vid1",
+    "src":"http://video-js.zencoder.com/oceans-clip.mp4",
+    "ext":".mp4"
+  }
+},
+
+{
+  "@id": "foo2",
+  "@type": "oa: Annotation",
+  "annotatedAt": "yesterday",
+  "annotatedBy": {
+    "@id": "http://danielcebrian.com/annotations/demod.html",
+    "@type": "foaf: Person",
+    "name": "Daniel Cebrian"
+  },
+  "body": {
+    "chars": "This is terrible"
+  },
+  "target": {
+    "container":"vid1",
+    "src":"http://video-js.zencoder.com/oceans-clip.mp4",
+    "ext":".mp4"
+  }
+},
+
+{
+  "@id": "foo2",
+  "@type": "oa: Annotation",
+  "annotatedAt": "yesterday",
+  "annotatedBy": {
+    "@id": "http://danielcebrian.com/annotations/demod.html",
+    "@type": "foaf: Person",
+    "name": "Daniel Cebrian"
+  },
+  "body": {
+    "chars": "I love this!"
   },
   "target": {
     "container":"vid1",

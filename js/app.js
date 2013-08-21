@@ -67,7 +67,7 @@
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
         annotationRow: App.templates.annotationRow(item),
-        annotationDetail: mediaType === "video" ? App.templates.videoAnnotationDetail(item) : ''
+        annotationDetail: (mediaType === "video" && index === 0) ? App.templates.videoAnnotationDetail(item) : ''
       });
       index++;
       annotationItems.push(html);
