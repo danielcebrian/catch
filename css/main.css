@@ -137,3 +137,19 @@ header {
   padding: 5px;
 }
 
+
+/* VIDEO ANNOTATION DETAIL */
+
+.videoAnnotationDetail .target {
+  width: 50%;
+  min-width: 300px;
+  float: left;
+  padding: 20px;
+}
+
+.videoAnnotationDetail .body {
+  float: left;
+  width: 40%;
+  padding: 20px 0;
+}
+
