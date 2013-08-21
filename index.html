@@ -144,6 +144,25 @@
 
 </script>
 
+<script type="text/x-handlebars" id="videoAnnotationDetail_Template">
+
+  <div class="videoAnnotationDetail">
+
+    <div class="target">
+
+      <video src="http://video-js.zencoder.com/oceans-clip.mp4"></video>
+
+    </div>
+
+    <div class="body">
+
+      {{ body.chars }}
+
+    </div>
+
+  </div>
+
+</script>
 
 
 
@@ -180,7 +199,18 @@ window.App.data = window.App.data || {};
 window.App.data.media = [
 
   {
+    "id": "456",
+    "type": "video",
+    "title": "Ocean's Clip",
+    "author": " n/a ",
+    "pubDate": " n/a ",
+    "annotationsCount": 241,
+    "latestAnnotationDate": "yesterday"
+  },
+
+  {
     "id": "123",
+    "type": "text",
     "title": "Adventures of Tom Sawyer",
     "author": "Mark Twain",
     "pubDate": "July, 1876",
@@ -190,6 +220,7 @@ window.App.data.media = [
 
   {
     "id": "234",
+    "type": "text",
     "title": "Leaves of Grass",
     "author": "Walt Whitman",
     "pubDate": "September, 1855",
@@ -199,6 +230,7 @@ window.App.data.media = [
 
     {
     "id": "345",
+    "type": "text",
     "title": "Moby Dick",
     "author": "Hermann Melville",
     "pubDate": "March, 1851",
@@ -207,6 +239,30 @@ window.App.data.media = [
   }
 
 ];
+
+window.App.data.videoAnnotations = [
+
+{
+  "@id": "foo",
+  "@type": "oa: Annotation",
+  "annotatedAt": "yesterday",
+  "annotatedBy": {
+    "@id": "http://danielcebrian.com/annotations/demod.html",
+    "@type": "foaf: Person",
+    "name": "Daniel Cebrian"
+  },
+  "body": {
+    "chars": "o sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum"
+  },
+  "target": {
+    "container":"vid1",
+    "src":"http://video-js.zencoder.com/oceans-clip.mp4",
+    "ext":".mp4"
+  }
+}
+
+];
+
 </script>
 
 <script type="text/fixture" id="annotationsFixture">

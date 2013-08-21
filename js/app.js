@@ -20,7 +20,8 @@
     "annotationList",
     "annotationItem",
     "annotationRow",
-    "annotationDetail"
+    "annotationDetail",
+    "videoAnnotationDetail"
   ];
 
   var compileTemplates = function() {
@@ -54,17 +55,19 @@
     $(".mediaListContainer").html(App.templates.mediaList({ mediaItems: mediaItems }));
   };
 
-  var expandMediaItem = function(mediaId) {
+  var expandMediaItem = function(mediaObj) {
+    var mediaId = mediaObj.id;
+    var mediaType = mediaObj.type;
     var el = $("#mediaItem_" + mediaId + " .mediaDetail .annotationListContainer");
     var annotationItems = [];
     var index = 0;
-    App.data.annotations.forEach(function(item) {
+    var items = mediaType === "video" ? App.data.videoAnnotations : App.data.annotations;
+    items.forEach(function(item) {
       var html = App.templates.annotationItem({
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
         annotationRow: App.templates.annotationRow(item),
-        //annotationDetail: App.templates.annotationDetail(item)
-        annotationDetail: ""
+        annotationDetail: mediaType === "video" ? App.templates.videoAnnotationDetail(item) : ''
       });
       index++;
       annotationItems.push(html);
@@ -74,14 +77,14 @@
 
 
 
-
   //
   // START APP
   //
 
   App.refresh = function() {
     renderMedia();
-    expandMediaItem("345");
+    expandMediaItem({id: "345", type: "text"});
+    expandMediaItem({id: "456", type: "video"});
   };
 
   //
