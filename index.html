@@ -27,7 +27,7 @@
 
 <script type="text/x-handlebars" id="mediaItem_Template">
 
-  <div class="mediaItem {{ evenOrOdd }}" id="mediaItem_{{ item.id }}">
+  <div class="mediaItem {{ evenOrOdd }} {{ openOrClosed }}" id="mediaItem_{{ item.id }}">
 
     {{{ mediaRow }}}
 
@@ -94,7 +94,7 @@
 
 <script type="text/x-handlebars" id="annotationItem_Template">
 
-  <div class="annotationItem {{ evenOrOdd }}" id="annotationItem_{{ id }}">
+  <div class="annotationItem {{ evenOrOdd }} {{ openOrClosed }}" id="annotationItem_{{ id }}">
 
     {{{ annotationRow }}}
 
@@ -146,7 +146,7 @@
 
 <script type="text/x-handlebars" id="videoAnnotationDetail_Template">
 
-  <div class="videoAnnotationDetail">
+  <div class="annotationDetail videoAnnotationDetail">
 
     <div class="target">
       <div class="videoContainer">
