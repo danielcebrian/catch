@@ -35,6 +35,34 @@
   });
 
 
+
+  //
+  // EVENT HANDLERS
+  //
+
+  var openMediaItem = function(evt) {
+    $(evt.currentTarget).closest(".mediaItem").removeClass("closed").addClass("open");
+  };
+
+  //
+  // TODO: Better disposal of contents upon close
+  //
+  var closeMediaItem = function(evt) {
+    $(evt.currentTarget).closest(".mediaItem").removeClass("open").addClass("closed");
+  };
+
+  var openAnnotationItem = function(evt) {
+    $(evt.currentTarget).closest(".annotationItem").removeClass("closed").addClass("open");
+  };
+
+  //
+  // TODO: Better disposal of contents upon close
+  //
+  var closeAnnotationItem = function(evt) {
+    $(evt.currentTarget).closest(".annotationItem").removeClass("open").addClass("closed");
+  };
+
+
   //
   // RENDER MEDIA
   //
@@ -46,6 +74,7 @@
       var html = App.templates.mediaItem({
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
+        openOrClosed: "closed",
         mediaRow: App.templates.mediaRow(item),
         mediaDetail: App.templates.mediaDetail({ annotationList: ""})
       });
@@ -53,9 +82,17 @@
       mediaItems.push(html);
     });
     $(".mediaListContainer").html(App.templates.mediaList({ mediaItems: mediaItems }));
+    $(".mediaItem .mediaRow").on("click", function(evt) {
+      var isClosed = $(evt.currentTarget).closest(".mediaItem").hasClass("closed");
+      if (isClosed) {
+        openMediaItem(evt);
+      } else {
+        closeMediaItem(evt);
+      }
+    });
   };
 
-  var expandMediaItem = function(mediaObj) {
+  renderAnnotations = function(mediaObj) {
     var mediaId = mediaObj.id;
     var mediaType = mediaObj.type;
     var el = $("#mediaItem_" + mediaId + " .mediaDetail .annotationListContainer");
@@ -66,6 +103,7 @@
       var html = App.templates.annotationItem({
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
+        openOrClosed: "closed",
         annotationRow: App.templates.annotationRow(item),
         annotationDetail: (mediaType === "video" && index === 0) ? App.templates.videoAnnotationDetail(item) : ''
       });
@@ -73,8 +111,19 @@
       annotationItems.push(html);
     });
     el.html(App.templates.annotationList({ annotationItems: annotationItems }));
+    el.on("click", ".annotationItem .annotationRow", function(evt) {
+      var isClosed = $(evt.currentTarget).closest(".annotationItem").hasClass("closed");
+      if (isClosed) {
+        openAnnotationItem(evt);
+      } else {
+        closeAnnotationItem(evt);
+      }
+    });
   };
 
+  var eventHandlers = function() {
+
+  };
 
 
   //
@@ -83,8 +132,8 @@
 
   App.refresh = function() {
     renderMedia();
-    expandMediaItem({id: "345", type: "text"});
-    expandMediaItem({id: "456", type: "video"});
+    renderAnnotations({id: "345", type: "text"});
+    renderAnnotations({id: "456", type: "video"});
   };
 
   //
