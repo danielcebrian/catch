@@ -27,7 +27,7 @@
 
 <script type="text/x-handlebars" id="mediaItem_Template">
 
-  <div class="mediaItem {{ evenOrOdd }} {{ openOrClosed }}" id="mediaItem_{{ item.id }}">
+  <div class="mediaItem {{ evenOrOdd }} {{ openOrClosed }} {{ expandable }}" id="mediaItem_{{ item.id }}">
 
     {{{ mediaRow }}}
 
@@ -41,6 +41,13 @@
 <script type="text/x-handlebars" id="mediaRow_Template">
 
   <div class="mediaRow">
+
+    <div class="expandableIcon field">
+      <!--
+      <img src="img/expandableIcon.png" alt="View Details" />
+      -->
+      &nbsp
+    </div>
 
     <div class="title field">
       {{ title }}
@@ -107,6 +114,13 @@
 <script type="text/x-handlebars" id="annotationRow_Template">
 
   <div class="annotationRow">
+
+    <div class="expandableIcon field">
+      <!--
+      <img src="img/expandableIcon.png" alt="View Details" />
+      -->
+      &nbsp
+    </div>
 
     <div class="annotatedBy field">
       {{ annotatedBy.name }}

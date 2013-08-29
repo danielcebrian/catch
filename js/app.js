@@ -75,6 +75,7 @@
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
         openOrClosed: "closed",
+        expandable: (item.id === "345" || item.id === "456") ? true : false,
         mediaRow: App.templates.mediaRow(item),
         mediaDetail: App.templates.mediaDetail({ annotationList: ""})
       });

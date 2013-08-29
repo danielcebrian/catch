@@ -35,6 +35,8 @@ header {
 
 .mediaRow, .annotationRow {
   width: 100%;
+  padding-top:20px;
+  height: 40px;
 }
 
 /* MEDIA LIST */
@@ -53,10 +55,19 @@ header {
 
 /* MEDIA ROW */
 
+.expandableIcon img {
+  height: 20px;
+}
+
+.expandableIcon .visible {
+  display: block;
+}
+
+.expandableIcon .hidden {
+  display: none;
+}
 
 .mediaRow {
-  padding-top:20px;
-  height: 40px;
   border-bottom: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
 }
@@ -69,20 +80,24 @@ header {
   background-color: #f4f4ff;
 }
 
+.mediaRow .expandableIcon {
+  width: 4%;
+}
+
 .mediaRow .title {
   width: 26%;
 }
 
 .mediaRow .author {
-  width: 18%;
+  width: 16%;
 }
 
 .mediaRow .pubDate {
-  width: 18%;
+  width: 16%;
 }
 
 .mediaRow .latestAnnotationDate {
-  width: 18%;
+  width: 16%;
 }
 
 .mediaRow .annotationsCount {
@@ -116,8 +131,6 @@ header {
 
 
 .annotationRow {
-  padding-top:10px;
-  height: 40px;
   border-bottom: 1px solid #cccccc;
 }
 
@@ -129,21 +142,23 @@ header {
   background-color: #f4fff4;
 }
 
+.annotationRow .expandableIcon {
+  width: 4%;
+}
+
 .annotationRow .annotatedBy {
   width: 19%;
 }
 
 .annotationRow .body {
-  width: 60%;
+  width: 50%;
 }
 
 .annotationRow .annotatedAt {
   width: 14%
 }
 
-.annotationList .field {
-  padding: 5px;
-}
+
 
 /* ANNOTATION DETAIL */
 
