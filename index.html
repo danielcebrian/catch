@@ -43,19 +43,21 @@
   <div class="mediaRow">
 
     <div class="expandableIcon field">
-      <!--
+      
       <img src="img/expandableIcon.png" alt="View Details" />
-      -->
-      &nbsp
+      &nbsp  <!-- TODO: better way to ensure width upon hide -->
+
     </div>
 
     <div class="title field">
-      {{ title }}
+      <span class="titleText">{{ title }}</span>, <span class="authorText">{{ author }}</span>
     </div>
 
+    <!--
     <div class="author field">
       {{ author }}
     </div>
+    -->
 
     <div class="pubDate field">
       {{ pubDate }}
@@ -116,9 +118,9 @@
   <div class="annotationRow">
 
     <div class="expandableIcon field">
-      <!--
+      
       <img src="img/expandableIcon.png" alt="View Details" />
-      -->
+      
       &nbsp
     </div>
 
@@ -234,8 +236,8 @@ window.App.data.media = [
     "id": "456",
     "type": "video",
     "title": "Ocean's Clip",
-    "author": " n/a ",
-    "pubDate": " n/a ",
+    "author": "National Geographic",
+    "pubDate": "May 15, 2011",
     "annotationsCount": 241,
     "latestAnnotationDate": "yesterday"
   },
