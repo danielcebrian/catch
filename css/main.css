@@ -167,12 +167,29 @@ header {
 }
 
 .annotationDetail .target {
-  width: 30%;
+  width: 35%;
   float: left;
+  padding: 20px;
 }
 
 .annotationDetail .body {
-  width: 65%;
+  width: 55%;
+  padding: 20px;
+}
+
+.annotationDetail .originalText {
+  font-style:italic;
+  color: #666666;
+  padding-top: 5px;
+}
+
+.annotationDetail .originalText p, .annotationDetail .body p {
+  padding:5px 0;
+}
+
+.annotationDetail .startPosition, .annotationDetail .endPosition, .annotationDetail .annotatedBy {
+  font-size: 72%;
+  color: #999999;
 }
 
 /* VIDEO ANNOTATION DETAIL */

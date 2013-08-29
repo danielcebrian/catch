@@ -145,22 +145,30 @@
     <div class="target">
 
       <div class="startPosition">
-        {{ targetItem.start }}
+        {{ media.title }} ({{ targetItem.start }})
       </div>
 
       <div class="originalText">
         {{{ target0.exact }}}
       </div>
 
+      <!--
       <div class="endPosition">
         {{ targetItem.end }}
       </div>
+      -->
 
     </div>
 
     <div class="body">
 
-      {{{ body.chars }}}
+      <div class="annotatedBy">
+        {{ annotatedBy.name }}
+      </div>
+
+      <div class="bodyText">
+        {{{ body.chars }}}
+      </div>
 
     </div>
 

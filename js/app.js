@@ -107,7 +107,7 @@
         evenOrOdd: index % 2 ? "odd" : "even",
         openOrClosed: "closed",
         annotationRow: App.templates.annotationRow(item),
-        annotationDetail: (mediaType === "video") ? App.templates.videoAnnotationDetail(item) : App.templates.annotationDetail({ body: item.body, target0: item.target.selector[0]["0"], targetItem: item.target.selector[0].item })
+        annotationDetail: (mediaType === "video") ? App.templates.videoAnnotationDetail(item) : App.templates.annotationDetail({ media: mediaObj, annotatedBy: item.annotatedBy, body: item.body, target0: item.target.selector[0]["0"], targetItem: item.target.selector[0].item })
       });
       index++;
       annotationItems.push(html);
@@ -131,8 +131,10 @@
 
   App.refresh = function() {
     renderMedia();
-    renderAnnotations({id: "345", type: "text"});
-    renderAnnotations({id: "456", type: "video"});
+    renderAnnotations(App.data.media[3]);
+    renderAnnotations(App.data.media[0]);
+    //renderAnnotations({id: "345", type: "text"});
+    //renderAnnotations({id: "456", type: "video"});
   };
 
   //
