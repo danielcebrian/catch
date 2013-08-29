@@ -16,6 +16,36 @@
 
   <div class="mediaList">
 
+    <div class="header">
+
+      <div class="mediaRow">
+
+        <div class="expandableIcon field">
+          
+          &nbsp  <!-- TODO: better way to ensure width upon hide -->
+
+        </div>
+
+        <div class="title field">
+          Media Title and Author
+        </div>
+
+        <div class="pubDate field">
+          Published
+        </div>
+
+        <div class="annotationsCount field">
+          Annotations
+        </div>
+
+        <div class="latestAnnotationDate field">
+          Latest Annotation
+        </div>
+
+      </div>
+
+    </div>
+
     {{#each mediaItems}}
       {{{ this }}}
     {{/each }}

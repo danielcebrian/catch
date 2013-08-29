@@ -39,7 +39,7 @@ header {
 .mediaListContainer {
   width: 90%;
   margin: 0 auto;
-  border-top:1px solid #cccccc;
+
   
 }
 
@@ -47,6 +47,18 @@ header {
   width: 100%;
 }
 
+/* MEDIA LIST HEADER */
+
+.mediaList .header .mediaRow {
+  font-size: 80%;
+  color: #666666;
+  border:none;
+  font-weight: bold;
+}
+
+.mediaList .header .mediaRow .field {
+  text-decoration:underline;
+}
 
 /* MEDIA ROW */
 
