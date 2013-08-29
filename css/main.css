@@ -35,8 +35,8 @@ header {
 
 .mediaRow, .annotationRow {
   width: 100%;
-  padding-top:20px;
-  height: 40px;
+  padding-top:10px;
+  height: 30px;
 }
 
 /* MEDIA LIST */
@@ -147,11 +147,11 @@ header {
 }
 
 .annotationRow .annotatedBy {
-  width: 19%;
+  width: 15%;
 }
 
 .annotationRow .body {
-  width: 50%;
+  width: 55%;
 }
 
 .annotationRow .annotatedAt {

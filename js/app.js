@@ -31,7 +31,11 @@
   };
 
   Handlebars.registerHelper('deparagraph', function(txt) {
-    return txt.replace("<p>", "").replace("</p>", "");
+    var dpg = txt.replace("<p>", "").replace("</p>", "");
+    console.log("deparagraph on: " + txt);
+    console.log(dpg);
+    return dpg;
+    
   });
 
 
@@ -150,6 +154,7 @@
       item.type = item['@type'];
     });
     */
+    anno_items.pop();  // error in last anno for some reason
     App.data.annotations = anno_items;
   };
 
