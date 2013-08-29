@@ -16,6 +16,36 @@
 
   <div class="mediaList">
 
+    <div class="header">
+
+      <div class="mediaRow">
+
+        <div class="expandableIcon field">
+          
+          &nbsp  <!-- TODO: better way to ensure width upon hide -->
+
+        </div>
+
+        <div class="title field">
+          Media Title and Author
+        </div>
+
+        <div class="pubDate field">
+          Published
+        </div>
+
+        <div class="annotationsCount field">
+          Annotations
+        </div>
+
+        <div class="latestAnnotationDate field">
+          Latest Annotation
+        </div>
+
+      </div>
+
+    </div>
+
     {{#each mediaItems}}
       {{{ this }}}
     {{/each }}
@@ -27,7 +57,7 @@
 
 <script type="text/x-handlebars" id="mediaItem_Template">
 
-  <div class="mediaItem {{ evenOrOdd }} {{ openOrClosed }}" id="mediaItem_{{ item.id }}">
+  <div class="mediaItem {{ evenOrOdd }} {{ openOrClosed }} {{ expandable }}" id="mediaItem_{{ item.id }}">
 
     {{{ mediaRow }}}
 
@@ -42,13 +72,22 @@
 
   <div class="mediaRow">
 
-    <div class="title field">
-      {{ title }}
+    <div class="expandableIcon field">
+      
+      <img src="img/expandableIcon.png" alt="View Details" />
+      &nbsp  <!-- TODO: better way to ensure width upon hide -->
+
     </div>
 
+    <div class="title field">
+      <span class="titleText">{{ title }}</span>, <span class="authorText">{{ author }}</span>
+    </div>
+
+    <!--
     <div class="author field">
       {{ author }}
     </div>
+    -->
 
     <div class="pubDate field">
       {{ pubDate }}
@@ -108,6 +147,13 @@
 
   <div class="annotationRow">
 
+    <div class="expandableIcon field">
+      
+      <img src="img/expandableIcon.png" alt="View Details" />
+      
+      &nbsp
+    </div>
+
     <div class="annotatedBy field">
       {{ annotatedBy.name }}
     </div>
@@ -130,13 +176,31 @@
 
     <div class="target">
 
-      {{ target }}
+      <div class="startPosition">
+        {{ media.title }} ({{ targetItem.start }})
+      </div>
+
+      <div class="originalText">
+        {{{ target0.exact }}}
+      </div>
+
+      <!--
+      <div class="endPosition">
+        {{ targetItem.end }}
+      </div>
+      -->
 
     </div>
 
     <div class="body">
 
-      {{ body }}
+      <div class="annotatedBy">
+        {{ annotatedBy.name }}
+      </div>
+
+      <div class="bodyText">
+        {{{ body.chars }}}
+      </div>
 
     </div>
 
@@ -202,8 +266,8 @@ window.App.data.media = [
     "id": "456",
     "type": "video",
     "title": "Ocean's Clip",
-    "author": " n/a ",
-    "pubDate": " n/a ",
+    "author": "National Geographic",
+    "pubDate": "May 15, 2011",
     "annotationsCount": 241,
     "latestAnnotationDate": "yesterday"
   },

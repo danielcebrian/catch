@@ -33,56 +33,85 @@ header {
   white-space: nowrap;
 }
 
-.mediaRow, .annotationRow {
-  width: 100%;
-}
 
 /* MEDIA LIST */
 
 .mediaListContainer {
   width: 90%;
   margin: 0 auto;
-  border-top:1px solid #cccccc;
-  border-right:1px solid #cccccc;
+
+  
 }
 
 .mediaList {
   width: 100%;
 }
 
+/* MEDIA LIST HEADER */
+
+.mediaList .header .mediaRow {
+  font-size: 80%;
+  color: #666666;
+  border:none;
+  font-weight: bold;
+}
+
+.mediaList .header .mediaRow .field {
+  text-decoration:underline;
+}
 
 /* MEDIA ROW */
 
+.expandableIcon img {
+  height: 16px;
+}
+
+.expandableIcon .visible {
+  display: block;
+}
+
+.expandableIcon .hidden {
+  display: none;
+}
 
 .mediaRow {
+  width: 100%;
   padding-top:20px;
   height: 40px;
   border-bottom: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
 }
 
 .mediaItem.odd .mediaRow {
-  background-color: #eaeaff;
+  /* background-color: #eaeaff; */
 }
 
 .mediaItem.even .mediaRow {
-  background-color: #f4f4ff;
+  /* background-color: #f4f4ff; */
+}
+
+.mediaRow .expandableIcon {
+  width: 3%;
 }
 
 .mediaRow .title {
-  width: 26%;
+  width: 44%;
+  font-size:120%;
 }
 
-.mediaRow .author {
-  width: 18%;
+.mediaRow .titleText {
+  font-weight: bold;
+}
+
+.mediaRow .authorText {
+  font-style: italic;
 }
 
 .mediaRow .pubDate {
-  width: 18%;
+  width: 16%;
 }
 
 .mediaRow .latestAnnotationDate {
-  width: 18%;
+  width: 16%;
 }
 
 .mediaRow .annotationsCount {
@@ -116,33 +145,38 @@ header {
 
 
 .annotationRow {
-  padding-top:10px;
-  height: 40px;
+  width: 100%;
+  padding-top:12px;
+  height: 30px;
   border-bottom: 1px solid #cccccc;
 }
 
 .annotationItem.odd .annotationRow {
-  background-color: #eaffea;
+  /* background-color: #eaffea; */
 }
 
 .annotationItem.even .annotationRow {
-  background-color: #f4fff4;
+  /* background-color: #f4fff4; */
+}
+
+.annotationRow .expandableIcon {
+  width: 3%;
 }
 
 .annotationRow .annotatedBy {
-  width: 19%;
+  width: 15%;
 }
 
 .annotationRow .body {
-  width: 60%;
+  width: 55%;
 }
 
 .annotationRow .annotatedAt {
   width: 14%
 }
 
-.annotationList .field {
-  padding: 5px;
+.annotationItem.open .annotationRow {
+  border-bottom:none;
 }
 
 /* ANNOTATION DETAIL */
@@ -151,6 +185,35 @@ header {
   display: none;
 }
 
+.annotationDetail {
+  border-bottom:1px solid #cccccc;
+}
+
+.annotationDetail .target {
+  width: 35%;
+  float: left;
+  padding: 20px;
+}
+
+.annotationDetail .body {
+  width: 55%;
+  padding: 20px;
+}
+
+.annotationDetail .originalText {
+  font-style:italic;
+  color: #666666;
+  padding-top: 5px;
+}
+
+.annotationDetail .originalText p, .annotationDetail .body p {
+  padding:5px 0;
+}
+
+.annotationDetail .startPosition, .annotationDetail .endPosition, .annotationDetail .annotatedBy {
+  font-size: 72%;
+  color: #999999;
+}
 
 /* VIDEO ANNOTATION DETAIL */
 

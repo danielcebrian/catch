@@ -31,7 +31,11 @@
   };
 
   Handlebars.registerHelper('deparagraph', function(txt) {
-    return txt.replace("<p>", "").replace("</p>", "");
+    var dpg = txt.replace("<p>", "").replace("</p>", "");
+    console.log("deparagraph on: " + txt);
+    console.log(dpg);
+    return dpg;
+    
   });
 
 
@@ -75,6 +79,7 @@
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
         openOrClosed: "closed",
+        expandable: (item.id === "345" || item.id === "456") ? true : false,
         mediaRow: App.templates.mediaRow(item),
         mediaDetail: App.templates.mediaDetail({ annotationList: ""})
       });
@@ -98,14 +103,15 @@
     var el = $("#mediaItem_" + mediaId + " .mediaDetail .annotationListContainer");
     var annotationItems = [];
     var index = 0;
-    var items = mediaType === "video" ? App.data.videoAnnotations : App.data.annotations;
+    var items = (mediaType === "video") ? App.data.videoAnnotations : App.data.annotations;
     items.forEach(function(item) {
+      //console.log("rendering annotation: " + item["target"]["selector"][0]["0"].exact);
       var html = App.templates.annotationItem({
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
         openOrClosed: "closed",
         annotationRow: App.templates.annotationRow(item),
-        annotationDetail: (mediaType === "video" && index === 0) ? App.templates.videoAnnotationDetail(item) : ''
+        annotationDetail: (mediaType === "video") ? App.templates.videoAnnotationDetail(item) : App.templates.annotationDetail({ media: mediaObj, annotatedBy: item.annotatedBy, body: item.body, target0: item.target.selector[0]["0"], targetItem: item.target.selector[0].item })
       });
       index++;
       annotationItems.push(html);
@@ -121,9 +127,6 @@
     });
   };
 
-  var eventHandlers = function() {
-
-  };
 
 
   //
@@ -132,8 +135,10 @@
 
   App.refresh = function() {
     renderMedia();
-    renderAnnotations({id: "345", type: "text"});
-    renderAnnotations({id: "456", type: "video"});
+    renderAnnotations(App.data.media[3]);
+    renderAnnotations(App.data.media[0]);
+    //renderAnnotations({id: "345", type: "text"});
+    //renderAnnotations({id: "456", type: "video"});
   };
 
   //
@@ -149,6 +154,7 @@
       item.type = item['@type'];
     });
     */
+    anno_items.pop();  // error in last anno for some reason
     App.data.annotations = anno_items;
   };
 
