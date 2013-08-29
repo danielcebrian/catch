@@ -99,14 +99,15 @@
     var el = $("#mediaItem_" + mediaId + " .mediaDetail .annotationListContainer");
     var annotationItems = [];
     var index = 0;
-    var items = mediaType === "video" ? App.data.videoAnnotations : App.data.annotations;
+    var items = (mediaType === "video") ? App.data.videoAnnotations : App.data.annotations;
     items.forEach(function(item) {
+      //console.log("rendering annotation: " + item["target"]["selector"][0]["0"].exact);
       var html = App.templates.annotationItem({
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
         openOrClosed: "closed",
         annotationRow: App.templates.annotationRow(item),
-        annotationDetail: (mediaType === "video" && index === 0) ? App.templates.videoAnnotationDetail(item) : ''
+        annotationDetail: (mediaType === "video") ? App.templates.videoAnnotationDetail(item) : App.templates.annotationDetail({ body: item.body, target0: item.target.selector[0]["0"], targetItem: item.target.selector[0].item })
       });
       index++;
       annotationItems.push(html);
@@ -122,9 +123,6 @@
     });
   };
 
-  var eventHandlers = function() {
-
-  };
 
 
   //

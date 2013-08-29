@@ -166,6 +166,14 @@ header {
   display: none;
 }
 
+.annotationDetail .target {
+  width: 30%;
+  float: left;
+}
+
+.annotationDetail .body {
+  width: 65%;
+}
 
 /* VIDEO ANNOTATION DETAIL */
 
