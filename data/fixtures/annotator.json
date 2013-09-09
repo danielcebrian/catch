@@ -1,0 +1,619 @@
+[
+  {
+    "geolocation": {
+      "latitude": 42.422382, 
+      "altitude": null, 
+      "longitude": -71.18992229999999, 
+      "accuracy": 112
+    }, 
+    "updated": "2013-09-09T03:50:22.288494+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-09T03:50:22.288459+00:00", 
+    "quote": "", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p>prueba</p>", 
+    "user": "alice", 
+    "media": "video", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "kbtNE3PuTAa-EmnWodLJjg", 
+    "rangeTime": {
+      "start": 1.417221, 
+      "end": 6.071871
+    }
+  }, 
+  {
+    "updated": "2013-09-05T21:06:48.595796+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-05T21:06:48.595771+00:00", 
+    "media": "video", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p>&nbsp;fasdf as</p>", 
+    "user": "alice", 
+    "quote": "", 
+    "permissions": {
+      "read": [
+        null
+      ], 
+      "admin": [], 
+      "update": [
+        null
+      ], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "eVSLxjqXRgG2s4QWtzOIwQ", 
+    "rangeTime": {
+      "start": 31.561153, 
+      "end": 36.215803
+    }
+  }, 
+  {
+    "updated": "2013-09-05T21:06:13.917032+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-05T21:06:13.917009+00:00", 
+    "media": "video", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p>fas asf adfs adfs fads</p>", 
+    "user": "alice", 
+    "quote": "", 
+    "permissions": {
+      "read": [
+        null
+      ], 
+      "admin": [], 
+      "update": [
+        null
+      ], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "IH51aOO_SsKnCldVXiPYqw", 
+    "rangeTime": {
+      "start": 7.993026, 
+      "end": 12.647675999999999
+    }
+  }, 
+  {
+    "updated": "2013-09-05T21:06:03.061363+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-05T21:06:03.061339+00:00", 
+    "media": "video", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p>prova</p>", 
+    "user": "alice", 
+    "quote": "", 
+    "permissions": {
+      "read": [
+        null
+      ], 
+      "admin": [], 
+      "update": [
+        null
+      ], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "BTaUf-7lRTS7dsLQ3iHCYg", 
+    "rangeTime": {
+      "start": 5.143471, 
+      "end": 8.909291015625
+    }
+  }, 
+  {
+    "geolocation": {
+      "latitude": 42.373616000000005, 
+      "altitude": null, 
+      "longitude": -71.10973299999999, 
+      "accuracy": 22000
+    }, 
+    "updated": "2013-09-05T19:26:20.609963+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-05T19:26:20.609939+00:00", 
+    "quote": "", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p>sdfsdfsf</p>", 
+    "user": "alice", 
+    "media": "video", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "IARKr3-YQqmbwCHhGXwtGw", 
+    "rangeTime": {
+      "start": 3.599748, 
+      "end": 11.927540624999999
+    }
+  }, 
+  {
+    "geolocation": {
+      "latitude": 42.39572545170273, 
+      "altitude": null, 
+      "longitude": -71.1219705793599, 
+      "accuracy": 65
+    }, 
+    "updated": "2013-09-05T14:43:10.208284+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-05T14:43:10.208258+00:00", 
+    "quote": "", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p>Diving into the water</p>", 
+    "user": "alice", 
+    "media": "video", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "dCMj7FRjTYGpiIJL69mh0w", 
+    "rangeTime": {
+      "start": 11.999882340431213, 
+      "end": 13.599866652488709
+    }
+  }, 
+  {
+    "geolocation": {
+      "latitude": 42.39572545170273, 
+      "altitude": null, 
+      "longitude": -71.1219705793599, 
+      "accuracy": 65
+    }, 
+    "updated": "2013-09-05T14:42:15.439701+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-05T14:42:15.439674+00:00", 
+    "quote": "", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p>Lots of fish</p>", 
+    "user": "alice", 
+    "media": "video", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "ur_0cl-xQbWeVDXpJ7PlIw", 
+    "rangeTime": {
+      "start": 5.149867057800293, 
+      "end": 9.804366874694825
+    }
+  }, 
+  {
+    "updated": "2013-09-04T08:55:34.514267+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-09-04T08:55:34.514242+00:00", 
+    "media": "video", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "", 
+    "user": "alice", 
+    "quote": "", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "G2UzsEHHRyKFJ4EwkVqZRw", 
+    "rangeTime": {
+      "start": 32.814, 
+      "end": 37.4687
+    }
+  }, 
+  {
+    "updated": "2013-09-03T20:18:01.083948+00:00", 
+    "target": {
+      "src": "http://www.youtube.com/watch?v=2vR4LeL0yzE", 
+      "ext": "Youtube", 
+      "container": "vid3"
+    }, 
+    "created": "2013-09-03T20:18:01.083917+00:00", 
+    "media": "video", 
+    "tags": [], 
+    "uri": "http://127.0.0.1:5000/annotations", 
+    "ranges": [], 
+    "text": "<p>new</p>", 
+    "user": "alice", 
+    "quote": "", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "QYPPD_fqQ02kjZLc8Ai9SQ", 
+    "rangeTime": {
+      "start": 5.499826, 
+      "end": 11.499825999999999
+    }
+  }, 
+  {
+    "media": "video", 
+    "updated": "2013-09-03T09:00:37.134801+00:00", 
+    "rangeTime": {
+      "start": 35.85205, 
+      "end": 40.506699999999995
+    }, 
+    "tags": [], 
+    "quote": "", 
+    "created": "2013-09-03T08:59:39.400049+00:00", 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "user": "alice", 
+    "text": "<p>peche</p>\n<p><a href=\"http://youtu.be/2wqffVaWwFw\">http://youtu.be/2wqffVaWwFw</a></p>\n<p>&nbsp;</p>", 
+    "consumer": "mockconsumer", 
+    "id": "208DF4GVTLylTq6B0CpLZA", 
+    "permissions": {
+      "read": [
+        null
+      ], 
+      "admin": [], 
+      "update": [
+        null
+      ], 
+      "delete": []
+    }
+  }, 
+  {
+    "geolocation": {
+      "latitude": 36.7198767, 
+      "altitude": null, 
+      "longitude": -4.2958291, 
+      "accuracy": 28
+    }, 
+    "updated": "2013-09-01T09:25:21.476930+00:00", 
+    "rangeTime": {
+      "start": 36.182630859375, 
+      "end": 38.728142578125
+    }, 
+    "tags": [], 
+    "quote": "", 
+    "created": "2013-09-01T09:18:35.135532+00:00", 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "media": "video", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "user": "alice", 
+    "text": "<p>esta es otra rubrica de prueba:</p>\n<p><iframe src=\"https://gteavirtual.org/rubric/?mod=portal&amp;scr=viewrb&amp;evt=frame&amp;irb=966\" frameborder=\"0\" style=\"width: 800px; height: 600px; overflow-y: scroll; background: transparent;\" width=\"300\" height=\"150\"></iframe></p>", 
+    "consumer": "mockconsumer", 
+    "id": "dcDtTirpRgKm0Hfuof6z0w", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }
+  }, 
+  {
+    "geolocation": {
+      "latitude": 42.4224935, 
+      "altitude": null, 
+      "longitude": -71.19008149999999, 
+      "accuracy": 85
+    }, 
+    "updated": "2013-08-31T22:54:32.520769+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-08-31T22:54:32.520745+00:00", 
+    "quote": "", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p style=\"text-align: center;\"><img src=\"http://www.openvideoannotation.org/img/ova_logo_yel.png\" alt=\"\" width=\"90\" height=\"44\" style=\"undefined\"><br data-mce-bogus=\"1\"></p><p style=\"text-align: center;\">This is my Annotation with <strong>OpenVideoAnnotation</strong></p>", 
+    "user": "alice", 
+    "media": "video", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "8I2NBkJbQoeF3-bqgpcwTw", 
+    "rangeTime": {
+      "start": 25.277645, 
+      "end": 29.932295
+    }
+  }, 
+  {
+    "geolocation": {}, 
+    "updated": "2013-08-30T17:42:50.244322+00:00", 
+    "rangeTime": {
+      "start": 15.056382000000001, 
+      "end": 19.711032
+    }, 
+    "tags": [], 
+    "quote": "", 
+    "created": "2013-08-30T16:03:00.437356+00:00", 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "media": "video", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "user": "alice", 
+    "text": "<p><a href=\"http://www.openvideoannotation.org/explore.php\">http://www.openvideoannotation.org/explore.php</a><br></p>", 
+    "consumer": "mockconsumer", 
+    "id": "Q23GWeSMTBKJFPWoBP6okw", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }
+  }, 
+  {
+    "geolocation": {
+      "latitude": 42.3800434, 
+      "altitude": null, 
+      "longitude": -71.1179611, 
+      "accuracy": 82
+    }, 
+    "updated": "2013-08-30T17:42:18.511901+00:00", 
+    "rangeTime": {
+      "start": 2.097112, 
+      "end": 6.751762000000001
+    }, 
+    "tags": [], 
+    "quote": "", 
+    "created": "2013-08-30T17:06:08.807602+00:00", 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "media": "video", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "user": "alice", 
+    "text": "<p style=\"text-align: center;\">Test with a url:</p><p style=\"text-align: center;\">All this work is made in:</p><p style=\"text-align: center;\"><a href=\"explore.php\" data-mce-href=\"explore.php\">Open Video Annotation</a><br data-mce-bogus=\"1\"></p>", 
+    "consumer": "mockconsumer", 
+    "id": "dyot9zB1THmpM1xqVYDFYQ", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }
+  }, 
+  {
+    "geolocation": {}, 
+    "updated": "2013-08-30T17:39:27.007429+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-08-30T17:39:27.007404+00:00", 
+    "quote": "", 
+    "tags": [], 
+    "uri": "http://127.0.0.1:5000/annotations", 
+    "ranges": [], 
+    "text": "<p>Con enlace a <a data-mce-href=\"http://www.openvideoannotation.org\" href=\"http://www.openvideoannotation.org\">www.openvideoannotation.org</a></p>", 
+    "user": "alice", 
+    "media": "video", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "6yBEdIvORYO-uyUnjOTvRA", 
+    "rangeTime": {
+      "start": 16.327807, 
+      "end": 20.982457
+    }
+  }, 
+  {
+    "media": "video", 
+    "updated": "2013-08-30T17:10:48.283993+00:00", 
+    "rangeTime": {
+      "start": 1.614788, 
+      "end": 6.269438
+    }, 
+    "tags": [], 
+    "quote": "", 
+    "created": "2013-08-30T07:01:09.149934+00:00", 
+    "uri": "http://127.0.0.1:5000/annotations", 
+    "ranges": [], 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "user": "alice", 
+    "text": "<p>asdf <strong>asdf</strong> adfs&nbsp;</p>", 
+    "consumer": "mockconsumer", 
+    "id": "EBYo4NXvSkOqQaXiA0tnsw", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }
+  }, 
+  {
+    "geolocation": {}, 
+    "updated": "2013-08-30T13:42:12.140833+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-08-30T13:42:12.140809+00:00", 
+    "quote": "", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p><strong>my test with rich text</strong></p><p style=\"padding-left: 30px;\">dfdsfsdf</p><p style=\"padding-left: 30px;\"><br data-mce-bogus=\"1\"></p>", 
+    "user": "alice", 
+    "media": "video", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "6ii35N6SRp-U9AftRNe1iQ", 
+    "rangeTime": {
+      "start": 1.467554, 
+      "end": 6.122203999999999
+    }
+  }, 
+  {
+    "updated": "2013-08-30T07:15:18.916481+00:00", 
+    "target": {
+      "src": "http://video-js.zencoder.com/oceans-clip.mp4", 
+      "ext": ".mp4", 
+      "container": "vid1"
+    }, 
+    "created": "2013-08-30T07:15:18.916457+00:00", 
+    "media": "video", 
+    "tags": [], 
+    "uri": "http://danielcebrian.com/annotations/demo.html", 
+    "ranges": [], 
+    "text": "<p><img src=\"http://www.poweranimalsunleashed.com/images/forest-light-900.jpg\" alt=\"\" width=\"226\" height=\"181\" style=\"display: block; margin-left: auto; margin-right: auto;\"><br data-mce-bogus=\"1\"></p><p style=\"text-align: center;\">This is a photo of a Forest</p>", 
+    "user": "alice", 
+    "quote": "", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }, 
+    "consumer": "mockconsumer", 
+    "id": "-DI7Bx1kTuaQkF7tT0uuRw", 
+    "rangeTime": {
+      "start": 5.494717, 
+      "end": 10.149367
+    }
+  }, 
+  {
+    "updated": "2013-08-30T07:05:02.212576+00:00", 
+    "created": "2013-08-30T07:04:47.433366+00:00", 
+    "media": "text", 
+    "tags": [], 
+    "uri": "http://127.0.0.1:5000/annotations", 
+    "ranges": [
+      {
+        "start": "/p[1]/code[1]", 
+        "end": "/p[1]", 
+        "startOffset": 7, 
+        "endOffset": 471
+      }
+    ], 
+    "text": "<p><strong>asdfas</strong> dfads</p>", 
+    "user": "alice", 
+    "quote": "vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum", 
+    "consumer": "mockconsumer", 
+    "id": "1q2mFmxbRxCLIC71w40ISA", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }
+  }, 
+  {
+    "updated": "2013-08-30T06:04:47.614153+00:00", 
+    "created": "2013-08-30T06:04:47.614130+00:00", 
+    "media": "text", 
+    "tags": [], 
+    "uri": "http://127.0.0.1:5000/annotations", 
+    "ranges": [
+      {
+        "start": "/p[1]/strong[1]", 
+        "end": "/p[1]", 
+        "startOffset": 36, 
+        "endOffset": 121
+      }
+    ], 
+    "text": "<p>&nbsp;dfasdf <strong>asd</strong> <em>fadfs</em>&nbsp;</p>", 
+    "user": "alice", 
+    "quote": "e senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feu", 
+    "consumer": "mockconsumer", 
+    "id": "9qTfiPqWRC2mug8JflM9eg", 
+    "permissions": {
+      "read": [], 
+      "admin": [], 
+      "update": [], 
+      "delete": []
+    }
+  }
+]
