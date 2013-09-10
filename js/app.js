@@ -97,10 +97,9 @@
     });
   };
 
-  renderAnnotations = function(mediaObj) {
+  renderAnnotations = function(mediaObj, annotations, el) {
     var mediaId = mediaObj.id;
     var mediaType = mediaObj.type;
-    var el = $("#mediaItem_" + mediaId + " .mediaDetail .annotationListContainer");
     var annotationItems = [];
     var index = 0;
     var items = (mediaType === "video") ? App.data.videoAnnotations : App.data.annotations;
@@ -134,9 +133,9 @@
   //
 
   App.refresh = function() {
-    renderMedia();
-    renderAnnotations(App.data.media[3]);
-    renderAnnotations(App.data.media[0]);
+
+    //renderAnnotations(App.data.media[3]);
+    renderAnnotations(App.data.media[0], App.data.media[0].annotations, $(".annotationListContainer"));
     //renderAnnotations({id: "345", type: "text"});
     //renderAnnotations({id: "456", type: "video"});
   };
