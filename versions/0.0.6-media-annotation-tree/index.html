@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>CATCH Project Version 0.0.7 - Media Annotation Tree With Video</title>
+    <title>CATCH Project Version 0.0.6 - Media Annotation Tree</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -15,36 +15,6 @@
 <script type="text/x-handlebars" id="mediaList_Template">
 
   <div class="mediaList">
-
-    <div class="header">
-
-      <div class="mediaRow">
-
-        <div class="expandableIcon field">
-          
-          &nbsp  <!-- TODO: better way to ensure width upon hide -->
-
-        </div>
-
-        <div class="title field">
-          Media Title and Author
-        </div>
-
-        <div class="pubDate field">
-          Published
-        </div>
-
-        <div class="annotationsCount field">
-          Annotations
-        </div>
-
-        <div class="latestAnnotationDate field">
-          Latest Annotation
-        </div>
-
-      </div>
-
-    </div>
 
     {{#each mediaItems}}
       {{{ this }}}
@@ -73,21 +43,19 @@
   <div class="mediaRow">
 
     <div class="expandableIcon field">
-      
+      <!--
       <img src="img/expandableIcon.png" alt="View Details" />
-      &nbsp  <!-- TODO: better way to ensure width upon hide -->
-
+      -->
+      &nbsp
     </div>
 
     <div class="title field">
-      <span class="titleText">{{ title }}</span>, <span class="authorText">{{ author }}</span>
+      {{ title }}
     </div>
 
-    <!--
     <div class="author field">
       {{ author }}
     </div>
-    -->
 
     <div class="pubDate field">
       {{ pubDate }}
@@ -148,9 +116,9 @@
   <div class="annotationRow">
 
     <div class="expandableIcon field">
-      
+      <!--
       <img src="img/expandableIcon.png" alt="View Details" />
-      
+      -->
       &nbsp
     </div>
 
@@ -232,12 +200,11 @@
 
 
   <header style="width:60%; margin-left:auto; margin-right: auto">
-
-    <h1>CATCH Project Version 0.0.7 - Media Annotation Tree With Video</h1>
+    <h1>CATCH Project Version 0.0.6 - Media Annotation Tree</h1>
     <br>
     <div>
     <p>
-      Using <a href="http://danielcebrian.com/annotations/demo.html">sample video annotation data from Daniel Cebrian</a> and Open Annotation format data from <a href="http://highbrow.lib.harvard.edu/melville/moby_dick/class/muohio_eng352_spring2013/commentaries">Harvard's Highbrow system</a>, this version implements a UI tree with both video and text objects at the top level and their annotations at the second level. Grid rows can be expanded/collapsed by clicking.
+      Using Open Annotation format data from <a href="http://highbrow.lib.harvard.edu/melville/moby_dick/class/muohio_eng352_spring2013/commentaries">Harvard's Highbrow system</a>, this version implements a UI tree with text objects at the top level and their annotations at the second level. Grid rows can be expanded/collapsed by clicking.
     </p>
     <br>
     <p>
@@ -246,9 +213,7 @@
         JQuery
     </p>
     <br>
-  </div>  
-
-
+  </div>
   </header>
 
   <section id="main">
@@ -282,8 +247,8 @@ window.App.data.media = [
     "id": "456",
     "type": "video",
     "title": "Ocean's Clip",
-    "author": "National Geographic",
-    "pubDate": "May 15, 2011",
+    "author": " n/a ",
+    "pubDate": " n/a ",
     "annotationsCount": 241,
     "latestAnnotationDate": "yesterday"
   },

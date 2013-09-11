@@ -1,0 +1,30 @@
+
+[
+
+  {
+  	"id": "123",
+  	"title": "Adventures of Tom Sawyer",
+  	"author": "Mark Twain",
+  	"pubDate": "July, 1876",
+  	"annotationsCount": 4393,
+  	"latestAnnotationDate": "yesterday"
+  },
+
+  {
+  	"id": "234",
+  	"title": "Leaves of Grass",
+  	"author": "Walt Whitman",
+  	"pubDate": "September, 1855",
+  	"annotationsCount": 6756,
+  	"latestAnnotationDate": "9:15 AM"
+  },
+
+    {
+  	"id": "345",
+  	"title": "Moby Dick",
+  	"author": "Hermann Melville",
+  	"pubDate": "March, 1851",
+  	"annotationsCount": 3756,
+  	"latestAnnotationDate": "Aug 14"
+  }
+]

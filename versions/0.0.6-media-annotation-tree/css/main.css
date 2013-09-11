@@ -1,0 +1,209 @@
+
+
+body, div, p, canvas, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+div {
+  overflow: hidden;
+}
+
+header {
+  margin: 30px auto;
+  text-align: center;
+  width: 100%;
+}
+
+#main {
+  padding-bottom: 100px;
+}
+
+
+/* GRID FORMATTING */
+
+.field {
+  padding: 0 10px;
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mediaRow, .annotationRow {
+  width: 100%;
+  padding-top:10px;
+  height: 30px;
+}
+
+/* MEDIA LIST */
+
+.mediaListContainer {
+  width: 90%;
+  margin: 0 auto;
+  border-top:1px solid #cccccc;
+  border-right:1px solid #cccccc;
+}
+
+.mediaList {
+  width: 100%;
+}
+
+
+/* MEDIA ROW */
+
+.expandableIcon img {
+  height: 20px;
+}
+
+.expandableIcon .visible {
+  display: block;
+}
+
+.expandableIcon .hidden {
+  display: none;
+}
+
+.mediaRow {
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+.mediaItem.odd .mediaRow {
+  background-color: #eaeaff;
+}
+
+.mediaItem.even .mediaRow {
+  background-color: #f4f4ff;
+}
+
+.mediaRow .expandableIcon {
+  width: 4%;
+}
+
+.mediaRow .title {
+  width: 26%;
+}
+
+.mediaRow .author {
+  width: 16%;
+}
+
+.mediaRow .pubDate {
+  width: 16%;
+}
+
+.mediaRow .latestAnnotationDate {
+  width: 16%;
+}
+
+.mediaRow .annotationsCount {
+  width: 8%;
+}
+
+
+/* MEDIA DETAIL */
+
+.mediaItem.closed .mediaDetail {
+  display: none;
+}
+
+
+/* ANNOTATION LIST */
+
+
+.annotationListContainer {
+  width: 96%;
+  margin: 0 auto;
+  float: right;
+  border-left: 2px solid #dddddd;
+}
+
+.annotationList {
+  width: 100%;
+}
+
+
+/* ANNOTATION ROW */
+
+
+.annotationRow {
+  border-bottom: 1px solid #cccccc;
+}
+
+.annotationItem.odd .annotationRow {
+  background-color: #eaffea;
+}
+
+.annotationItem.even .annotationRow {
+  background-color: #f4fff4;
+}
+
+.annotationRow .expandableIcon {
+  width: 4%;
+}
+
+.annotationRow .annotatedBy {
+  width: 15%;
+}
+
+.annotationRow .body {
+  width: 55%;
+}
+
+.annotationRow .annotatedAt {
+  width: 14%
+}
+
+
+
+/* ANNOTATION DETAIL */
+
+.annotationItem.closed .annotationDetail {
+  display: none;
+}
+
+.annotationDetail .target {
+  width: 35%;
+  float: left;
+  padding: 20px;
+}
+
+.annotationDetail .body {
+  width: 55%;
+  padding: 20px;
+}
+
+.annotationDetail .originalText {
+  font-style:italic;
+  color: #666666;
+  padding-top: 5px;
+}
+
+.annotationDetail .originalText p, .annotationDetail .body p {
+  padding:5px 0;
+}
+
+.annotationDetail .startPosition, .annotationDetail .endPosition, .annotationDetail .annotatedBy {
+  font-size: 72%;
+  color: #999999;
+}
+
+/* VIDEO ANNOTATION DETAIL */
+
+.videoAnnotationDetail .target {
+  width: 50%;
+  min-width: 300px;
+  float: left;
+  padding: 20px;
+}
+
+.videoAnnotationDetail .body {
+  float: left;
+  width: 40%;
+  padding: 20px 0;
+}
+
