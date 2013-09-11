@@ -1,0 +1,10 @@
+
+
+body, div, p, canvas, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
