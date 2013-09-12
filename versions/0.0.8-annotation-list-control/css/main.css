@@ -1,0 +1,255 @@
+
+
+body, div, p, canvas, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+div {
+  overflow: hidden;
+}
+
+header {
+  margin: 30px auto;
+  text-align: center;
+  width: 100%;
+}
+
+#main {
+  min-width: 640px;
+  padding-bottom: 100px;
+}
+
+
+/* GRID FORMATTING */
+
+.field {
+  padding: 0 10px;
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* MEDIA LIST */
+
+.mediaListContainer {
+  width: 90%;
+  margin: 0 auto;
+
+  
+}
+
+.mediaList {
+  width: 100%;
+}
+
+/* MEDIA LIST HEADER */
+
+.mediaList .header .mediaRow {
+  font-size: 80%;
+  color: #666666;
+  border:none;
+  font-weight: bold;
+}
+
+.mediaList .header .mediaRow .field {
+  text-decoration:underline;
+}
+
+/* MEDIA ROW */
+
+.mediaRow {
+  width: 100%;
+  padding-top:20px;
+  height: 40px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.mediaItem.odd .mediaRow {
+  /* background-color: #eaeaff; */
+}
+
+.mediaItem.even .mediaRow {
+  /* background-color: #f4f4ff; */
+}
+
+
+
+.mediaRow .expandableIcon {
+  width: 3%;
+}
+
+.mediaRow .title {
+  width: 44%;
+  font-size:120%;
+}
+
+.mediaRow .titleText {
+  font-weight: bold;
+}
+
+.mediaRow .authorText {
+  font-style: italic;
+}
+
+.mediaRow .pubDate {
+  width: 16%;
+}
+
+.mediaRow .latestAnnotationDate {
+  width: 16%;
+}
+
+.mediaRow .annotationsCount {
+  width: 8%;
+}
+
+
+/* MEDIA DETAIL */
+
+.mediaItem.closed .mediaDetail {
+  display: none;
+}
+
+
+/* ANNOTATION LIST */
+
+
+.annotationListContainer {
+  width: 96%;
+  margin: 0 auto;
+  border: 2px solid #dddddd;
+}
+
+.annotationList {
+  width: 100%;
+  font-size:0.875em;
+}
+
+.annotationList .header {
+  background-color:whitesmoke;
+  font-weight: bold;
+}
+
+
+/* ANNOTATION ROW */
+
+
+.annotationRow {
+  width: 100%;
+  padding-top:12px;
+  height: 30px;
+
+}
+
+.expandableIcon img, .closeDetailIcon img {
+  height: 16px;
+}
+
+.expandableIcon .visible {
+  display: block;
+}
+
+.expandableIcon .hidden {
+  display: none;
+}
+
+.annotationItem.odd .annotationRow {
+  /* background-color: #eaffea; */
+}
+
+.annotationItem.even .annotationRow {
+  /* background-color: #f4fff4; */
+}
+
+.annotationRow .expandableIcon {
+  width: 3%;
+}
+
+.annotationRow .annotatedBy {
+  width: 12%;
+}
+
+.annotationRow .body {
+  width: 40%;
+}
+
+.annotationRow .start {
+  width: 5%
+}
+
+.annotationRow .end {
+  width: 5%
+}
+
+.annotationRow .annotatedAt {
+  width: 14%
+}
+
+.annotationItem.open .annotationRow {
+  display: none;
+}
+
+
+
+
+/* ANNOTATION DETAIL */
+
+.annotationItem.closed .annotationDetail {
+  display: none;
+}
+
+.annotationDetail {
+  border-top:1px solid #cccccc;
+  border-bottom:1px solid #cccccc;
+  padding-left:30px;
+}
+
+.annotationDetail .detailHeader {
+  font-style: italic;
+  margin-top:10px;
+}
+
+.annotationDetail .target {
+
+}
+
+.annotationDetail .body {
+
+}
+
+.annotationDetail .originalText {
+  font-style:italic;
+  color: #666666;
+  padding-top: 5px;
+}
+
+.annotationDetail .originalText p, .annotationDetail .body p {
+  padding:5px 0;
+}
+
+.annotationDetail .startPosition, .annotationDetail .endPosition, .annotationDetail .annotatedBy {
+  font-size: 72%;
+  color: #999999;
+}
+
+
+
+
+
+
+/* VIDEO ANNOTATION DETAIL */
+
+.geolocationIcon img {
+  height: 28px;
+}
+
+.videoAnnotationDetail .body {
+  padding: 20px 0;
+}
+
