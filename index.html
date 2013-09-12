@@ -88,6 +88,142 @@
 
   </section>
 
+  <section class="research">
+
+<h2>Technology Decisions For The CATCH UI</h2>
+
+<p>Outlines what libraries and frameworks were chosen and why.</p>
+
+<h3>Grid Control / Library</h3>
+
+<p>SlickGrid is the leading candidate, because:
+- It seems to nicely decouple presentation from data management, not trying to solve ajax loading, etc., which we want to be done in the MVC, not in the grid control
+- It seems to have the largest ecosystem among open-source JQuery-compatible grid controls</p>
+
+<p><a href="#gridReview">More detail and links for grid libraries</a> that were evaluated</p>
+
+<h3>MVC Framework - more detail on front-end frameworks that were evaluated</h3>
+
+<p>Angular is the leading candidate:
+ - easy to implement quickly
+ - big and growing ecosystem, supported by Google</p>
+
+<p>Ember may also be a good choice. It&#39;s a heavy-duty, opinionated framework designed for complex apps that people spend a lot of time in. As such it may result in a better-engineered product at the expense of additional development time.</p>
+
+<p><a href="#mvcReview">More detail and links for MVC frameworks</a> that were evaluated</p>
+
+</section>
+
+
+  <section class="research" id="mvcReview">
+
+<h2>Review of MVC Libraries for CATCH UI</h2>
+
+<h3><a href="https://github.com/jashkenas/backbone">Backbone</a></h3>
+
+<p>The original Javascript MVC framework</p>
+
+<ul><li>lots of developers know it</li><li>very simple and unopinionated</li><li>has lost favor because it&#39;s very low level and doesn&#39;t provide a lot of what developers need, so they have to rely on third-party additions like Marionette or roll their own, resulting in hard-to-maintain code</li></ul>
+
+<h3><a href="https://github.com/angular/angular.js">Angular</a></h3>
+
+<p>Strong contender for new Javascript MVC library of choice for most projects, produced by folks at Google</p>
+
+<ul><li>easier to get started than Ember</li><li>comes from Google, so it may be a safe bet in terms of future-proofing the ecosystem</li><li>declarative style makes for readable markup and fewer lines of code</li><li>model layer may be less well designed than Ember&#39;s</li></ul>
+
+<h3><a href="https://github.com/emberjs/ember.js/">Ember</a></h3>
+
+<p>Other lead contender for new MVC library of choice, designed for large-scale, complex apps</p>
+
+<ul><li><p><a href="http://eviltrout.com/2013/06/15/ember-vs-angular.html">this thread</a> discusses grid controls, performance, etc. related ot ember vs angular</p></li><li><p>designed for complex applications</p></li><li>difficult learning curve</li><li>powerful support for lots of features that may be needed</li><li>strong model layer</li></ul>
+
+
+
+  </section>
+
+
+<section class="research" id="gridReview" >
+
+<h2>Review of Grid Libraries for CATCH UI</h2>
+
+
+
+<h3><a href="http://wiki.jqueryui.com/w/page/34246941/Grid">JQuery UI Grid Widget</a></h3>
+
+<ul><li>not available yet</li><li>JQuery UI team supposedly evaluating the best features of Slickgrid, jqgrid, and DataTables and rolling them into an officla JQuery UI Grid Widget, but this effort has been underway for years and there&#39;s not much update</li></ul>
+
+<h3><a href="https://github.com/mleibman/SlickGrid/wiki">SlickGrid</a></h3>
+
+<p>Quite simply, SlickGrid is a JavaScript grid/spreadsheet component.
+It is an advanced component and is going to be a bit more difficult to learn and configure, but once you realize its full potential, it will blow your mind!</p>
+
+<p>Here&#39;s a <a href="http://mleibman.github.io/SlickGrid/examples/example-grouping">very nice demo</a></p>
+
+<ul><li>div based, not table based</li><li>seems to have nice decoupling of data and presentation</li><li>has the largest community</li><li>appears to have been adopted by JQuery UI</li><li>depends on JQuery</li><li>has a lot of editing/spreadsheet functionality that wouldn&#39;t be relevant</li></ul>
+
+<h3><a href="http://www.datatables.net/">DataTables</a></h3>
+
+<p>DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table</p>
+
+<ul><li>table based, not div</li></ul>
+
+<h3><a href="https://github.com/tonytomov/jqGrid">jqGrid</a></h3>
+
+<p>Ajax-enabled grid control</p>
+
+<ul><li>seems too coupled to backend</li></ul>
+
+<h3><a href="https://github.com/wyuenho/backgrid">Backgrid</a></h3>
+
+<p>Backgrid.js is a set of components for building semantic and easily stylable data grid widgets. It offers a simple, intuitive programming interface that makes easy things easy, but hard things possible when dealing with tabular data.</p>
+
+<ul><li>depends on Backbone (which depends on JQuery and Underscore)</li></ul>
+
+<h3><a href="https://github.com/ducksboard/gridster.js">Gridster</a></h3>
+
+<p>Gridster is a jQuery plugin that makes building intuitive draggable layouts from elements spanning multiple columns. You can even dynamically add and remove elements from the grid.</p>
+
+<ul><li>depends on JQuery</li></ul>
+
+<h3><a href="https://github.com/okfn/recline/">Recline.js</a></h3>
+
+<p>A simple but powerful library for building data applications in pure Javascript and HTML.</p>
+
+<h3><a href="https://github.com/mleibman/SlickGrid/wiki">SlickGrid</a></h3>
+
+<p>Quite simply, SlickGrid is a JavaScript grid/spreadsheet component.
+It is an advanced component and is going to be a bit more difficult to learn and configure, but once you realize its full potential, it will blow your mind!</p>
+
+<p>Here&#39;s a <a href="http://mleibman.github.io/SlickGrid/examples/example-grouping">very nice demo</a></p>
+
+<ul><li>div based, not table based</li><li>seems to have nice decoupling of data and presentation</li><li>has the largest community</li><li>appears to have been adopted by JQuery UI</li><li>depends on JQuery</li><li>has a lot of editing/spreadsheet functionality that wouldn&#39;t be relevant</li></ul>
+
+<h3><a href="http://www.datatables.net/">DataTables</a></h3>
+
+<p>DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table</p>
+
+<ul><li>table based, not div</li></ul>
+
+<h3><a href="https://github.com/mbostock/d3">D3</a></h3>
+
+<p>Amazing JS data visualization library</p>
+
+<ul><li>made for complex data visualization and graphics, not really for grid/tabular</li><li>may be too complex, not having grid/tabular features</li><li>example at http://bl.ocks.org/syntagmatic/3687826</li></ul>
+
+<h3><a href="https://github.com/addepar/ember-table">Ember-Table</a></h3>
+
+<ul><li>depends on Ember.js and JQuery UI</li></ul>
+
+<h3><a href="http://angular-ui.github.io/ng-grid/">ng-grid</a></h3>
+
+<ul><li>a grid plug-in for Angular</li></ul>
+
+
+</section>
+
+
+
+
   <footer>
     <!--    footer goes here      -->
   </footer>

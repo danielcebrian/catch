@@ -1,0 +1,21 @@
+<h1>Technology Decisions For The CATCH UI</h1>
+
+<p>Outlines what libraries and frameworks were chosen and why.</p>
+
+<h2>Grid Control / Library</h2>
+
+<p>SlickGrid is the leading candidate, because:
+- It seems to nicely decouple presentation from data management, not trying to solve ajax loading, etc., which we want to be done in the MVC, not in the grid control
+- It seems to have the largest ecosystem among open-source JQuery-compatible grid controls</p>
+
+<p><a href="./gridReview.md">More detail and links for grid libraries</a> that were evaluated</p>
+
+<h2><a href="./mvcReview.md">MVC Framework</a> - more detail on front-end frameworks that were evaluated</h2>
+
+<p>Angular is the leading candidate:
+ - easy to implement quickly
+ - big and growing ecosystem, supported by Google</p>
+
+<p>Ember may also be a good choice. It&#39;s a heavy-duty, opinionated framework designed for complex apps that people spend a lot of time in. As such it may result in a better-engineered product at the expense of additional development time.</p>
+
+<p><a href="./mvcReview.md">More detail and links for MVC frameworks</a> that were evaluated</p>
