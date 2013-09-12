@@ -124,6 +124,9 @@
         closeAnnotationItem(evt);
       }
     });
+    el.on("click", ".annotationItem .closeDetailIcon", function(evt) {
+      closeAnnotationItem(evt);
+    });
   };
 
 

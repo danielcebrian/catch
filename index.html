@@ -252,28 +252,58 @@
 
   <div class="annotationDetail videoAnnotationDetail">
 
-    <div class="target">
-      <div class="videoContainer">
-        <video poster="http://video-js.zencoder.com/oceans-clip.png" src="http://video-js.zencoder.com/oceans-clip.mp4" controls></video>
-      </div>
+    <div class="detailHeader">
+      <span class="closeDetailIcon">
+        <img src="img/closeIcon.png" alt="Hide Details" />
+      </span>
+      On {{ annotatedAt }} <a href="">{{ annotatedBy.name }}</a>, wrote from
+      <span class="geolocationIcon">
+        <img src="img/geolocation_icon.png" alt="Location" />
+      </span>
     </div>
 
     <div class="body">
 
-      {{ body.chars }}
+      {{{ body.chars }}}
 
     </div>
+
+    <div class="controls">
+
+                 <p><a href="#" style="text-decoration:underline">Comment</a>&nbsp;   <a href="#"style="text-decoration:underline">Hide Comment</a>&nbsp;   <a href="#" style="text-decoration:underline">Delete</a></p>
+
+                 <blockquote style="font-size:90%"><p><em>On Sep 14, 2013 4:35 PM <a href="#">jharvard</a>, wrote from [<a href="#">show map location</a>]:</em></p>
+
+                 <p>
+                 Integer quis lobortis tortor, eget condimentum nisl. Vestibulum ut pretium metus, et porta leo. Nunc dolor sapien, volutpat at eleifend in, malesuada gravida mauris. Donec laoreet sodales eros sed ornare. In feugiat erat vitae nisl dignissim, et fringilla lectus iaculis.</p>
+
+    </div>
+
 
   </div>
 
 </script>
 
 
+ <header style="width:80%; margin-left:auto; margin-right: auto">
 
+    <h1>CATCH UI Version 0.0.8<br> Annotation List Control</h1>
+    <br>
+    <div>
+      <p>
+        Using <a href="http://danielcebrian.com/annotations/demo.html">sample video annotation data from Daniel Cebrian</a>, this version implements a UI tree control rendering a list of annotations for a single video media object to match <a href="http://www.openvideoannotation.org/ova_mypage.php#">Phil Desenne's design mockups</a>. Clicking on annotations expands to reveal annotation details.<br><br><b>Click the second row for data that corresponds to the design mock-ups</b>.
+      </p>
+      <br>
+      <p>
+        <b>Libraries: </b>
+        <br>
+          JQuery
+      </p>
+      <br>
+    </div>  
 
-  <header>
-    <h1>CATCH Annotation Explorer</h1>
   </header>
+
 
   <section id="main">
 
@@ -376,7 +406,7 @@ window.App.data.videoAnnotations = [
     "name": "Daniel Cebrian"
   },
   "body": {
-    "chars": "This is terrible"
+    "chars": "<p>​Cras laoreet ligula id lectus ultrices scelerisque. Nam convallis mauris eget lectus aliquam eleifend.</p><img src='img/fish.jpg' width='220' height='159'><p>Curabitur quis facilisis libero. Mauris molestie lacus vel quam venenatis, id faucibus nisi lobortis. Praesent ac urna dolor. Ut eu massa ut diam facilisis tincidunt ac eu sem. Aliquam ullamcorper consequat viverra. Pellentesque vehicula lectus eget urna malesuada sagittis.</p>"
   },
   "target": {
     "container":"vid1",

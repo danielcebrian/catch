@@ -63,18 +63,6 @@ header {
 
 /* MEDIA ROW */
 
-.expandableIcon img {
-  height: 16px;
-}
-
-.expandableIcon .visible {
-  display: block;
-}
-
-.expandableIcon .hidden {
-  display: none;
-}
-
 .mediaRow {
   width: 100%;
   padding-top:20px;
@@ -89,6 +77,8 @@ header {
 .mediaItem.even .mediaRow {
   /* background-color: #f4f4ff; */
 }
+
+
 
 .mediaRow .expandableIcon {
   width: 3%;
@@ -157,6 +147,18 @@ header {
 
 }
 
+.expandableIcon img, .closeDetailIcon img {
+  height: 16px;
+}
+
+.expandableIcon .visible {
+  display: block;
+}
+
+.expandableIcon .hidden {
+  display: none;
+}
+
 .annotationItem.odd .annotationRow {
   /* background-color: #eaffea; */
 }
@@ -174,7 +176,7 @@ header {
 }
 
 .annotationRow .body {
-  width: 32%;
+  width: 40%;
 }
 
 .annotationRow .start {
@@ -190,8 +192,11 @@ header {
 }
 
 .annotationItem.open .annotationRow {
-  border-bottom:none;
+  display: none;
 }
+
+
+
 
 /* ANNOTATION DETAIL */
 
@@ -200,18 +205,22 @@ header {
 }
 
 .annotationDetail {
+  border-top:1px solid #cccccc;
   border-bottom:1px solid #cccccc;
+  padding-left:30px;
+}
+
+.annotationDetail .detailHeader {
+  font-style: italic;
+  margin-top:10px;
 }
 
 .annotationDetail .target {
-  width: 35%;
-  float: left;
-  padding: 20px;
+
 }
 
 .annotationDetail .body {
-  width: 55%;
-  padding: 20px;
+
 }
 
 .annotationDetail .originalText {
@@ -229,18 +238,18 @@ header {
   color: #999999;
 }
 
+
+
+
+
+
 /* VIDEO ANNOTATION DETAIL */
 
-.videoAnnotationDetail .target {
-  width: 50%;
-  min-width: 300px;
-  float: left;
-  padding: 20px;
+.geolocationIcon img {
+  height: 28px;
 }
 
 .videoAnnotationDetail .body {
-  float: left;
-  width: 40%;
   padding: 20px 0;
 }
 
