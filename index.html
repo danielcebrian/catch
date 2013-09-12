@@ -123,6 +123,40 @@
 
   <div class="annotationList">
 
+    <div class="header">
+
+      <div class="annotationRow">
+
+        <div class="expandableIcon field">
+          
+          &nbsp  <!-- TODO: better way to ensure width upon hide -->
+
+        </div>
+
+        <div class="annotatedBy field">
+          User
+        </div>
+
+        <div class="body field">
+          Annotation
+        </div>  
+
+        <div class="start field">
+          Start
+        </div>
+
+        <div class="end field">
+          End
+        </div>
+
+        <div class="annotatedAt field">
+          Date posted
+        </div>
+
+      </div>
+
+    </div>
+
     {{#each annotationItems}}
       {{{ this }}}
     {{/each}}
@@ -148,9 +182,7 @@
   <div class="annotationRow">
 
     <div class="expandableIcon field">
-      
       <img src="img/expandableIcon.png" alt="View Details" />
-      
       &nbsp
     </div>
 
@@ -160,6 +192,14 @@
 
     <div class="body field">
       {{deparagraph body.chars}}
+    </div>
+
+    <div class="start field">
+      {{ start }}
+    </div>
+
+    <div class="end field">
+      {{ end }}
     </div>
 
     <div class="annotatedAt field">
@@ -308,7 +348,7 @@ window.App.data.videoAnnotations = [
 {
   "@id": "foo",
   "@type": "oa: Annotation",
-  "annotatedAt": "yesterday",
+  "annotatedAt": "Sep 9, 2013, 3:45pm",
   "annotatedBy": {
     "@id": "http://danielcebrian.com/annotations/demod.html",
     "@type": "foaf: Person",
@@ -321,13 +361,15 @@ window.App.data.videoAnnotations = [
     "container":"vid1",
     "src":"http://video-js.zencoder.com/oceans-clip.mp4",
     "ext":".mp4"
-  }
+  },
+  "start": "0:03",
+  "end": "0:08"
 },
 
 {
   "@id": "foo2",
   "@type": "oa: Annotation",
-  "annotatedAt": "yesterday",
+  "annotatedAt": "Sep 3, 2013, 8:44pm",
   "annotatedBy": {
     "@id": "http://danielcebrian.com/annotations/demod.html",
     "@type": "foaf: Person",
@@ -340,13 +382,15 @@ window.App.data.videoAnnotations = [
     "container":"vid1",
     "src":"http://video-js.zencoder.com/oceans-clip.mp4",
     "ext":".mp4"
-  }
+  },
+  "start": "0:12",
+  "end": "0:22"
 },
 
 {
   "@id": "foo2",
   "@type": "oa: Annotation",
-  "annotatedAt": "yesterday",
+  "annotatedAt": "Aug 20, 2013, 1:22pm",
   "annotatedBy": {
     "@id": "http://danielcebrian.com/annotations/demod.html",
     "@type": "foaf: Person",
@@ -359,7 +403,9 @@ window.App.data.videoAnnotations = [
     "container":"vid1",
     "src":"http://video-js.zencoder.com/oceans-clip.mp4",
     "ext":".mp4"
-  }
+  },
+  "start": "4:11",
+  "end": "4:52"
 }
 
 ];

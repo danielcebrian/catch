@@ -20,6 +20,7 @@ header {
 }
 
 #main {
+  min-width: 640px;
   padding-bottom: 100px;
 }
 
@@ -132,12 +133,17 @@ header {
 .annotationListContainer {
   width: 96%;
   margin: 0 auto;
-  float: right;
-  border-left: 2px solid #dddddd;
+  border: 2px solid #dddddd;
 }
 
 .annotationList {
   width: 100%;
+  font-size:0.875em;
+}
+
+.annotationList .header {
+  background-color:whitesmoke;
+  font-weight: bold;
 }
 
 
@@ -148,7 +154,7 @@ header {
   width: 100%;
   padding-top:12px;
   height: 30px;
-  border-bottom: 1px solid #cccccc;
+
 }
 
 .annotationItem.odd .annotationRow {
@@ -164,11 +170,19 @@ header {
 }
 
 .annotationRow .annotatedBy {
-  width: 15%;
+  width: 12%;
 }
 
 .annotationRow .body {
-  width: 55%;
+  width: 32%;
+}
+
+.annotationRow .start {
+  width: 5%
+}
+
+.annotationRow .end {
+  width: 5%
 }
 
 .annotationRow .annotatedAt {
