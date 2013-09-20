@@ -141,6 +141,7 @@
     renderAnnotations(App.data.media[0], App.data.media[0].annotations, $(".annotationListContainer"));
     //renderAnnotations({id: "345", type: "text"});
     //renderAnnotations({id: "456", type: "video"});
+    openAnnotationItem({currentTarget: $(".annotationRow")[2]});
   };
 
   //
