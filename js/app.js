@@ -32,8 +32,6 @@
 
   Handlebars.registerHelper('deparagraph', function(txt) {
     var dpg = txt.replace("<p>", "").replace("</p>", "");
-    console.log("deparagraph on: " + txt);
-    console.log(dpg);
     return dpg;
     
   });
@@ -104,7 +102,6 @@
     var index = 0;
     var items = (mediaType === "video") ? App.data.videoAnnotations : App.data.annotations;
     items.forEach(function(item) {
-      //console.log("rendering annotation: " + item["target"]["selector"][0]["0"].exact);
       var html = App.templates.annotationItem({
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
@@ -141,6 +138,7 @@
     renderAnnotations(App.data.media[0], App.data.media[0].annotations, $(".annotationListContainer"));
     //renderAnnotations({id: "345", type: "text"});
     //renderAnnotations({id: "456", type: "video"});
+    openAnnotationItem({currentTarget: $(".annotationRow")[2]});
   };
 
   //

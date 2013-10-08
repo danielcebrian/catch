@@ -262,6 +262,10 @@
       </span>
     </div>
 
+    <div class="playMediaButton">
+      Play segment {{ start }} - {{ end }}
+    </div>
+
     <div class="body">
 
       {{{ body.chars }}}
@@ -270,13 +274,29 @@
 
     <div class="controls">
 
-                 <p><a href="#" style="text-decoration:underline">Comment</a>&nbsp;   <a href="#"style="text-decoration:underline">Hide Comment</a>&nbsp;   <a href="#" style="text-decoration:underline">Delete</a></p>
+       <p><a href="#" style="text-decoration:underline">Comment</a>&nbsp;   <a href="#"style="text-decoration:underline">Hide Comment</a>&nbsp;   <a href="#" style="text-decoration:underline">Delete</a></p>
+    </div>
 
-                 <blockquote style="font-size:90%"><p><em>On Sep 14, 2013 4:35 PM <a href="#">jharvard</a>, wrote from [<a href="#">show map location</a>]:</em></p>
+    <div class="comments">
 
-                 <p>
-                 Integer quis lobortis tortor, eget condimentum nisl. Vestibulum ut pretium metus, et porta leo. Nunc dolor sapien, volutpat at eleifend in, malesuada gravida mauris. Donec laoreet sodales eros sed ornare. In feugiat erat vitae nisl dignissim, et fringilla lectus iaculis.</p>
+       <blockquote style="font-size:90%"><p><em>On Sep 14, 2013 4:35 PM <a href="#">jharvard</a>, wrote from [<a href="#">show map location</a>]:</em></p>
 
+       <p>
+       Integer quis lobortis tortor, eget condimentum nisl. Vestibulum ut pretium metus, et porta leo. Nunc dolor sapien, volutpat at eleifend in, malesuada gravida mauris. Donec laoreet sodales eros sed ornare. In feugiat erat vitae nisl dignissim, et fringilla lectus iaculis.</p>
+
+    </div>
+
+    <div class="tags">
+      <h3>Tags:</h3>
+      {{#each tags}}
+        <div class="tag">
+          {{this}}
+        </div>
+      {{/each}}
+    </div>
+
+    <div class="shareControls">
+      <img src="img/shareControls.png" />
     </div>
 
 
@@ -393,7 +413,8 @@ window.App.data.videoAnnotations = [
     "ext":".mp4"
   },
   "start": "0:03",
-  "end": "0:08"
+  "end": "0:08",
+  "tags": ["moby dick", "Ishmael", "harpooners"]
 },
 
 {
@@ -414,7 +435,8 @@ window.App.data.videoAnnotations = [
     "ext":".mp4"
   },
   "start": "0:12",
-  "end": "0:22"
+  "end": "0:22",
+  "tags": ["ships", "Ishmael", "sea", "american literature"]
 },
 
 {
@@ -435,7 +457,8 @@ window.App.data.videoAnnotations = [
     "ext":".mp4"
   },
   "start": "4:11",
-  "end": "4:52"
+  "end": "4:52",
+  "tags": ["whaling"]
 }
 
 ];
