@@ -107,6 +107,7 @@
       items = (mediaType === "video") ? App.data.videoAnnotations : App.data.annotations;
     }
     items.forEach(function(item) {
+    console.log(item);
       var html = App.templates.annotationItem({
         item: item,
         evenOrOdd: index % 2 ? "odd" : "even",
@@ -137,8 +138,9 @@
   // START APP
   //
 
-  App.refresh = function() {
-    renderAnnotations(App.data.media[0], $(".annotationListContainer"));
+  App.refresh = function(mediaObj) {
+  console.log(mediaObj);
+    renderAnnotations(mediaObj, $(".annotationListContainer"));
     openAnnotationItem({currentTarget: $(".annotationRow")[2]});
   };
 
@@ -163,7 +165,7 @@
   $(function() {
     compileTemplates();
     loadFixtures();
-    App.refresh();
+    //App.refresh();
   });
 
 
