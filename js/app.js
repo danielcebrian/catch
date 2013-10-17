@@ -95,7 +95,7 @@
     });
   };
 
-  renderAnnotations = function(mediaObj, annotations, el) {
+  renderAnnotations = function(mediaObj, el) {
     var mediaId = mediaObj.id;
     var mediaType = mediaObj.type;
     var annotationItems = [];
@@ -133,11 +133,7 @@
   //
 
   App.refresh = function() {
-
-    //renderAnnotations(App.data.media[3]);
-    renderAnnotations(App.data.media[0], App.data.media[0].annotations, $(".annotationListContainer"));
-    //renderAnnotations({id: "345", type: "text"});
-    //renderAnnotations({id: "456", type: "video"});
+    renderAnnotations(App.data.media[0], $(".annotationListContainer"));
     openAnnotationItem({currentTarget: $(".annotationRow")[2]});
   };
 
