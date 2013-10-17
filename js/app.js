@@ -100,7 +100,12 @@
     var mediaType = mediaObj.type;
     var annotationItems = [];
     var index = 0;
-    var items = (mediaType === "video") ? App.data.videoAnnotations : App.data.annotations;
+    var items;
+    if (mediaObj.annotations) {
+      items = mediaObj.annotations;
+    } else {
+      items = (mediaType === "video") ? App.data.videoAnnotations : App.data.annotations;
+    }
     items.forEach(function(item) {
       var html = App.templates.annotationItem({
         item: item,
